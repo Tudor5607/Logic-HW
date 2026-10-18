@@ -1,0 +1,58 @@
+(c)
+Step 1, Symbol '(':
+□<- Current position
+    □
+
+Step 2, Symbol '¬':
+¬
+    □<- Current position
+
+Step 3, Symbol '(':
+¬
+    □
+        □<- Current position
+        □
+
+Step 4, Symbol 'B':
+¬
+    □<- Current position
+        B
+        □
+
+Step 5, Symbol '(':
+¬
+    □<- Current position
+        B
+        □
+        □
+
+Step 6, Symbol '¬':
+¬
+    ¬
+        B
+        □<- Current position
+        □
+
+Step 7, Symbol 'Q':
+¬
+    ¬<- Current position
+        B
+        Q
+        □
+
+Step 8, Symbol ')':
+¬<- Current position
+    ¬
+        B
+        Q
+        □
+
+Step 9, Symbol ')':
+¬
+    ¬
+        B
+        Q
+        □
+
+Invalid
+

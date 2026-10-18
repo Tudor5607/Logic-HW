@@ -1,0 +1,144 @@
+(b)
+Step 1, Symbol '(':
+□
+    □<- Current position
+    □
+
+Step 2, Symbol '(':
+□
+    □
+        □<- Current position
+        □
+    □
+
+Step 3, Symbol 'P':
+□
+    □<- Current position
+        P
+        □
+    □
+
+Step 4, Symbol '⇒':
+□
+    ⇒
+        P
+        □<- Current position
+    □
+
+Step 5, Symbol '(':
+□
+    ⇒
+        P
+        □
+            □<- Current position
+            □
+    □
+
+Step 6, Symbol 'Q':
+□
+    ⇒
+        P
+        □<- Current position
+            Q
+            □
+    □
+
+Step 7, Symbol '∧':
+□
+    ⇒
+        P
+        ∧
+            Q
+            □<- Current position
+    □
+
+Step 8, Symbol '(':
+□
+    ⇒
+        P
+        ∧
+            Q
+            □
+                □<- Current position
+                □
+    □
+
+Step 9, Symbol 'S':
+□
+    ⇒
+        P
+        ∧
+            Q
+            □<- Current position
+                S
+                □
+    □
+
+Step 10, Symbol '⇒':
+□
+    ⇒
+        P
+        ∧
+            Q
+            ⇒
+                S
+                □<- Current position
+    □
+
+Step 11, Symbol 'T':
+□
+    ⇒
+        P
+        ∧
+            Q
+            ⇒<- Current position
+                S
+                T
+    □
+
+Step 12, Symbol ')':
+□
+    ⇒
+        P
+        ∧<- Current position
+            Q
+            ⇒
+                S
+                T
+    □
+
+Step 13, Symbol ')':
+□
+    ⇒<- Current position
+        P
+        ∧
+            Q
+            ⇒
+                S
+                T
+    □
+
+Step 14, Symbol ')':
+□<- Current position
+    ⇒
+        P
+        ∧
+            Q
+            ⇒
+                S
+                T
+    □
+
+Step 15, Symbol ')':
+□
+    ⇒
+        P
+        ∧
+            Q
+            ⇒
+                S
+                T
+    □
+
+Invalid
+

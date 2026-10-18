@@ -1,0 +1,239 @@
+(f)
+Step 1, Symbol '(':
+□
+    □<- Current position
+    □
+
+Step 2, Symbol '(':
+□
+    □
+        □<- Current position
+        □
+    □
+
+Step 3, Symbol '(':
+□
+    □
+        □
+            □<- Current position
+            □
+        □
+    □
+
+Step 4, Symbol 'A':
+□
+    □
+        □<- Current position
+            A
+            □
+        □
+    □
+
+Step 5, Symbol '∨':
+□
+    □
+        ∨
+            A
+            □<- Current position
+        □
+    □
+
+Step 6, Symbol 'B':
+□
+    □
+        ∨<- Current position
+            A
+            B
+        □
+    □
+
+Step 7, Symbol ')':
+□
+    □<- Current position
+        ∨
+            A
+            B
+        □
+    □
+
+Step 8, Symbol '∧':
+□
+    ∧
+        ∨
+            A
+            B
+        □<- Current position
+    □
+
+Step 9, Symbol '(':
+□
+    ∧
+        ∨
+            A
+            B
+        □<- Current position
+            □
+    □
+
+Step 10, Symbol '¬':
+□
+    ∧
+        ∨
+            A
+            B
+        ¬
+            □<- Current position
+    □
+
+Step 11, Symbol 'C':
+□
+    ∧
+        ∨
+            A
+            B
+        ¬<- Current position
+            C
+    □
+
+Step 12, Symbol ')':
+□
+    ∧<- Current position
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+
+Step 13, Symbol ')':
+□<- Current position
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+
+Step 14, Symbol '⇒':
+⇒
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □<- Current position
+
+Step 15, Symbol '(':
+⇒
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+        □<- Current position
+        □
+
+Step 16, Symbol '(':
+⇒
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+        □
+            □<- Current position
+            □
+        □
+
+Step 17, Symbol 'D':
+⇒
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+        □<- Current position
+            D
+            □
+        □
+
+Step 18, Symbol '⇔':
+⇒
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+        ⇔
+            D
+            □<- Current position
+        □
+
+Step 19, Symbol 'E':
+⇒
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+        ⇔<- Current position
+            D
+            E
+        □
+
+Step 20, Symbol ')':
+⇒
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □<- Current position
+        ⇔
+            D
+            E
+        □
+
+Step 21, Symbol ')':
+⇒<- Current position
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+        ⇔
+            D
+            E
+        □
+
+Step 22, Symbol ')':
+⇒
+    ∧
+        ∨
+            A
+            B
+        ¬
+            C
+    □
+        ⇔
+            D
+            E
+        □
+
+Invalid
+

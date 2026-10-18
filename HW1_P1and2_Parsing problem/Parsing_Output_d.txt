@@ -1,0 +1,256 @@
+(d)
+Step 1, Symbol '(':
+□
+    □<- Current position
+    □
+
+Step 2, Symbol 'P':
+□<- Current position
+    P
+    □
+
+Step 3, Symbol '∧':
+∧
+    P
+    □<- Current position
+
+Step 4, Symbol '(':
+∧
+    P
+    □
+        □<- Current position
+        □
+
+Step 5, Symbol '(':
+∧
+    P
+    □
+        □<- Current position
+            □
+        □
+
+Step 6, Symbol '¬':
+∧
+    P
+    □
+        ¬
+            □<- Current position
+        □
+
+Step 7, Symbol 'Q':
+∧
+    P
+    □
+        ¬<- Current position
+            Q
+        □
+
+Step 8, Symbol ')':
+∧
+    P
+    □<- Current position
+        ¬
+            Q
+        □
+
+Step 9, Symbol '∧':
+∧
+    P
+    ∧
+        ¬
+            Q
+        □<- Current position
+
+Step 10, Symbol '(':
+∧
+    P
+    ∧
+        ¬
+            Q
+        □<- Current position
+            □
+
+Step 11, Symbol '¬':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            □<- Current position
+
+Step 12, Symbol '(':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            □<- Current position
+                □
+
+Step 13, Symbol '¬':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                □<- Current position
+
+Step 14, Symbol '(':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                □
+                    □<- Current position
+                    □
+
+Step 15, Symbol 'Q':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                □<- Current position
+                    Q
+                    □
+
+Step 16, Symbol '⇔':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                ⇔
+                    Q
+                    □<- Current position
+
+Step 17, Symbol '(':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                ⇔
+                    Q
+                    □<- Current position
+                        □
+
+Step 18, Symbol '¬':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                ⇔
+                    Q
+                    ¬
+                        □<- Current position
+
+Step 19, Symbol 'R':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                ⇔
+                    Q
+                    ¬<- Current position
+                        R
+
+Step 20, Symbol ')':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                ⇔<- Current position
+                    Q
+                    ¬
+                        R
+
+Step 21, Symbol ')':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬<- Current position
+                ⇔
+                    Q
+                    ¬
+                        R
+
+Step 22, Symbol ')':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬<- Current position
+            ¬
+                ⇔
+                    Q
+                    ¬
+                        R
+
+Step 23, Symbol ')':
+∧
+    P
+    ∧<- Current position
+        ¬
+            Q
+        ¬
+            ¬
+                ⇔
+                    Q
+                    ¬
+                        R
+
+Step 24, Symbol ')':
+∧<- Current position
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                ⇔
+                    Q
+                    ¬
+                        R
+
+Step 25, Symbol ')':
+∧
+    P
+    ∧
+        ¬
+            Q
+        ¬
+            ¬
+                ⇔
+                    Q
+                    ¬
+                        R
+
+Valid
+
