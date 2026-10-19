@@ -157,7 +157,7 @@ for i in range(len(Prop)):
                 #If the appending would lead to more than one child for the current node we know something went wrong.
                 elif Prop[i][j+1] == '¬':
                     if Pos.children != []:
-                        output = "Invalid:The next step would print the '¬' connective here, but the structure of the subtree woudn't be correct in that case."
+                        output = "Invalid:The next step would print the '¬' connective here, but the structure of the subtree wouldn't be correct in that case."
                     Pos.append("\"F\"")
 
                 #Create two open subtree nodes for the two propositions the connective will connect and switch to the first one.
