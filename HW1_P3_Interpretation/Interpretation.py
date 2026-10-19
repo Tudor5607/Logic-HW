@@ -38,9 +38,9 @@ class Tree:
             return v[self.name]
 
 
-#Some functions used in order to manipulate the trees in the algorithm
+#Some auxiliary functions
 
-#Checks if the symbol is a letter, which means we have reached an atomic propositon.
+#Checks if the symbol is an atomic proposition.
 def isAtomic(symbol):
     if ('a' <= symbol and symbol <= 'z') or ('A' <= symbol and symbol <= 'Z'):
         return True
@@ -76,7 +76,7 @@ def step(Pos,symbol):
     
     return Pos
 
-#The algorithm in question, from which we remove a lot of things as we will know that all the strings we input are valid propositional formulas.
+#Algorithm that builds the abstract syntax and then evaluates the value of the proposition.
 Trees = []
 Pos = 0
 with open("Interpretation_Input.txt",'r') as f:
