@@ -1,127 +1,138 @@
 (g)
 Step 1, Symbol '(':
-□
-    □<- Current position
-    □
+"□"
+    "F"<--
+    "F"
 
 Step 2, Symbol '(':
-□
-    □
-        □<- Current position
-        □
-    □
+"□"
+    "□"
+        "F"<--
+        "F"
+    "F"
 
 Step 3, Symbol '(':
-□
-    □
-        □
-            □<- Current position
-            □
-        □
-    □
+"□"
+    "□"
+        "□"
+            "F"<--
+            "F"
+        "F"
+    "F"
 
 Step 4, Symbol '(':
-□
-    □
-        □
-            □
-                □<- Current position
-                □
-            □
-        □
-    □
+"□"
+    "□"
+        "□"
+            "□"
+                "F"<--
+                "F"
+            "F"
+        "F"
+    "F"
 
 Step 5, Symbol 'A':
-□
-    □
-        □
-            □<- Current position
+"□"
+    "□"
+        "□"
+            "□"<--
                 A
-                □
-            □
-        □
-    □
+                "F"
+            "F"
+        "F"
+    "F"
 
 Step 6, Symbol '∨':
-□
-    □
-        □
+"□"
+    "□"
+        "□"
             ∨
                 A
-                □<- Current position
-            □
-        □
-    □
+                "F"<--
+            "F"
+        "F"
+    "F"
 
 Step 7, Symbol 'B':
-□
-    □
-        □
-            ∨<- Current position
+"□"
+    "□"
+        "□"
+            ∨<--
                 A
                 B
-            □
-        □
-    □
+            "F"
+        "F"
+    "F"
 
 Step 8, Symbol ')':
-□
-    □
-        □<- Current position
+"□"
+    "□"
+        "□"<--
             ∨
                 A
                 B
-            □
-        □
-    □
+            "F"
+        "F"
+    "F"
 
 Step 9, Symbol '∧':
-□
-    □
+"□"
+    "□"
         ∧
             ∨
                 A
                 B
-            □<- Current position
-        □
-    □
+            "F"<--
+        "F"
+    "F"
 
 Step 10, Symbol '(':
-□
-    □
+"□"
+    "□"
         ∧
             ∨
                 A
                 B
-            □<- Current position
-                □
-        □
-    □
+            "□"<--
+                "F"
+        "F"
+    "F"
 
 Step 11, Symbol '¬':
-□
-    □
+"□"
+    "□"
         ∧
             ∨
                 A
                 B
             ¬
-                □<- Current position
-        □
-    □
+                "F"<--
+        "F"
+    "F"
 
 Step 12, Symbol 'C':
-□
-    □
+"□"
+    "□"
         ∧
             ∨
                 A
                 B
-            ¬<- Current position
+            ¬<--
                 C
-        □
-    □
+        "F"
+    "F"
 
 Step 13, Symbol '∨':
-Invalid
+"□"
+    "□"
+        ∧
+            ∨
+                A
+                B
+            ¬<--
+                C
+        "F"
+    "F"
+
+Invalid:Current node is not open.
 

@@ -1,58 +1,30 @@
 (c)
 Step 1, Symbol '(':
-□<- Current position
-    □
+"□"<--
+    "F"
 
 Step 2, Symbol '¬':
 ¬
-    □<- Current position
+    "F"<--
 
 Step 3, Symbol '(':
 ¬
-    □
-        □<- Current position
-        □
+    "□"
+        "F"<--
+        "F"
 
 Step 4, Symbol 'B':
 ¬
-    □<- Current position
+    "□"<--
         B
-        □
+        "F"
 
 Step 5, Symbol '(':
 ¬
-    □<- Current position
+    "□"<--
         B
-        □
-        □
+        "F"
+        "F"
 
-Step 6, Symbol '¬':
-¬
-    ¬
-        B
-        □<- Current position
-        □
-
-Step 7, Symbol 'Q':
-¬
-    ¬<- Current position
-        B
-        Q
-        □
-
-Step 8, Symbol ')':
-¬<- Current position
-    ¬
-        B
-        Q
-        □
-
-Step 9, Symbol ')':
-¬
-    ¬
-        B
-        Q
-        □
-
-Invalid
+Invalid:The next step would print the '¬' connective here, but the structure of the subtree woudn't be correct in that case.
 

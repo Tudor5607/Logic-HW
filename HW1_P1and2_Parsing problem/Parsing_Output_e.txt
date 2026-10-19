@@ -1,51 +1,57 @@
 (e)
 Step 1, Symbol '(':
-□
-    □<- Current position
-    □
+"□"
+    "F"<--
+    "F"
 
 Step 2, Symbol '(':
-□
-    □
-        □<- Current position
-        □
-    □
+"□"
+    "□"
+        "F"<--
+        "F"
+    "F"
 
 Step 3, Symbol 'P':
-□
-    □<- Current position
+"□"
+    "□"<--
         P
-        □
-    □
+        "F"
+    "F"
 
 Step 4, Symbol '∨':
-□
+"□"
     ∨
         P
-        □<- Current position
-    □
+        "F"<--
+    "F"
 
 Step 5, Symbol 'Q':
-□
-    ∨<- Current position
+"□"
+    ∨<--
         P
         Q
-    □
+    "F"
 
 Step 6, Symbol ')':
-□<- Current position
+"□"<--
     ∨
         P
         Q
-    □
+    "F"
 
 Step 7, Symbol '⇒':
 ⇒
     ∨
         P
         Q
-    □<- Current position
+    "F"<--
 
 Step 8, Symbol '¬':
-Invalid
+⇒
+    ∨
+        P
+        Q
+    "F"<--
+
+Invalid:Expected an atomic proposition here.
 

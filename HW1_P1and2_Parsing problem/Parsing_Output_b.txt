@@ -1,125 +1,125 @@
 (b)
 Step 1, Symbol '(':
-□
-    □<- Current position
-    □
+"□"
+    "F"<--
+    "F"
 
 Step 2, Symbol '(':
-□
-    □
-        □<- Current position
-        □
-    □
+"□"
+    "□"
+        "F"<--
+        "F"
+    "F"
 
 Step 3, Symbol 'P':
-□
-    □<- Current position
+"□"
+    "□"<--
         P
-        □
-    □
+        "F"
+    "F"
 
 Step 4, Symbol '⇒':
-□
+"□"
     ⇒
         P
-        □<- Current position
-    □
+        "F"<--
+    "F"
 
 Step 5, Symbol '(':
-□
+"□"
     ⇒
         P
-        □
-            □<- Current position
-            □
-    □
+        "□"
+            "F"<--
+            "F"
+    "F"
 
 Step 6, Symbol 'Q':
-□
+"□"
     ⇒
         P
-        □<- Current position
+        "□"<--
             Q
-            □
-    □
+            "F"
+    "F"
 
 Step 7, Symbol '∧':
-□
+"□"
     ⇒
         P
         ∧
             Q
-            □<- Current position
-    □
+            "F"<--
+    "F"
 
 Step 8, Symbol '(':
-□
+"□"
     ⇒
         P
         ∧
             Q
-            □
-                □<- Current position
-                □
-    □
+            "□"
+                "F"<--
+                "F"
+    "F"
 
 Step 9, Symbol 'S':
-□
+"□"
     ⇒
         P
         ∧
             Q
-            □<- Current position
+            "□"<--
                 S
-                □
-    □
+                "F"
+    "F"
 
 Step 10, Symbol '⇒':
-□
+"□"
     ⇒
         P
         ∧
             Q
             ⇒
                 S
-                □<- Current position
-    □
+                "F"<--
+    "F"
 
 Step 11, Symbol 'T':
-□
+"□"
     ⇒
         P
         ∧
             Q
-            ⇒<- Current position
+            ⇒<--
                 S
                 T
-    □
+    "F"
 
 Step 12, Symbol ')':
-□
+"□"
     ⇒
         P
-        ∧<- Current position
+        ∧<--
             Q
             ⇒
                 S
                 T
-    □
+    "F"
 
 Step 13, Symbol ')':
-□
-    ⇒<- Current position
+"□"
+    ⇒<--
         P
         ∧
             Q
             ⇒
                 S
                 T
-    □
+    "F"
 
 Step 14, Symbol ')':
-□<- Current position
+"□"<--
     ⇒
         P
         ∧
@@ -127,10 +127,10 @@ Step 14, Symbol ')':
             ⇒
                 S
                 T
-    □
+    "F"
 
 Step 15, Symbol ')':
-□
+"□"
     ⇒
         P
         ∧
@@ -138,7 +138,7 @@ Step 15, Symbol ')':
             ⇒
                 S
                 T
-    □
+    "F"
 
-Invalid
+Invalid:Final tree contains open nodes
 

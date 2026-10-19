@@ -1,87 +1,87 @@
 (a)
 Step 1, Symbol '(':
-□
-    □<- Current position
-    □
+"□"
+    "F"<--
+    "F"
 
 Step 2, Symbol '(':
-□
-    □
-        □<- Current position
-        □
-    □
+"□"
+    "□"
+        "F"<--
+        "F"
+    "F"
 
 Step 3, Symbol '(':
-□
-    □
-        □
-            □<- Current position
-            □
-        □
-    □
+"□"
+    "□"
+        "□"
+            "F"<--
+            "F"
+        "F"
+    "F"
 
 Step 4, Symbol 'P':
-□
-    □
-        □<- Current position
+"□"
+    "□"
+        "□"<--
             P
-            □
-        □
-    □
+            "F"
+        "F"
+    "F"
 
 Step 5, Symbol '⇒':
-□
-    □
+"□"
+    "□"
         ⇒
             P
-            □<- Current position
-        □
-    □
+            "F"<--
+        "F"
+    "F"
 
 Step 6, Symbol 'Q':
-□
-    □
-        ⇒<- Current position
+"□"
+    "□"
+        ⇒<--
             P
             Q
-        □
-    □
+        "F"
+    "F"
 
 Step 7, Symbol ')':
-□
-    □<- Current position
+"□"
+    "□"<--
         ⇒
             P
             Q
-        □
-    □
+        "F"
+    "F"
 
 Step 8, Symbol '∨':
-□
+"□"
     ∨
         ⇒
             P
             Q
-        □<- Current position
-    □
+        "F"<--
+    "F"
 
 Step 9, Symbol 'S':
-□
-    ∨<- Current position
+"□"
+    ∨<--
         ⇒
             P
             Q
         S
-    □
+    "F"
 
 Step 10, Symbol ')':
-□<- Current position
+"□"<--
     ∨
         ⇒
             P
             Q
         S
-    □
+    "F"
 
 Step 11, Symbol '⇔':
 ⇔
@@ -90,10 +90,10 @@ Step 11, Symbol '⇔':
             P
             Q
         S
-    □<- Current position
+    "F"<--
 
 Step 12, Symbol 'T':
-⇔<- Current position
+⇔<--
     ∨
         ⇒
             P

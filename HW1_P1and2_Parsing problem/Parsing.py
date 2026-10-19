@@ -1,4 +1,4 @@
-#The tree class that will be used in the algorithm for determinig whether a string of symbols from the vocabulary of propositional logic is a proposition.
+#A class that we will use in the parsing algorithm.
 class Tree:
     #Constructor.
     def __init__(self,name):
@@ -15,35 +15,48 @@ class Tree:
 
     #Returns a string that is a visualization of tree, along with our current position inside it.
     def visualize(self,level):
-        output = "    "*level + self.name + self.ispos*"<- Current position" + '\n'
+        output = "    "*level + self.name + self.ispos*"<--" + '\n'
         for child in self.children:
             output += child.visualize(level + 1)
         return output
 
-    #Renames the current node if it is "empty", if it fails (the node isn't empty) the algorithm we will change the state (here named "output") of the tree to invalid.
+    #Renames the current node if it is open. If it fails (the node isn't open) the algorithm we will change the state (here named "output") of the tree to invalid.
     def rename(self,newName):
         output = "Valid"
-        if self.name == '□':
-            self.name = newName
+        #If the node we are trying to write in wasn't marked for a logical connective and we have to rename it, it means we have reached a leaf, which will have to be an atomic proposition.
+        if self.name == "\"F\"":
+            if isAtomic(newName) == True:
+                self.name = newName
+            else:
+                output = "Invalid:Expected an atomic proposition here."
+        #Otherwise, the node was marked as a logical connective node.
+        elif self.name == "\"□\"":
+            if isConnective(newName) == True:
+                self.name = newName
+            else:
+                output = "Invalid:Expected a logical connective here"
         else:
-            output = "Invalid"
+            output = "Invalid:Current node is not open."
         return output
 
-    #To be used after we exit the tree succesfully in order to determine if any nodes are "empty".
+    #To be used after we exit the tree succesfully in order to determine if there are any open nodes left and if we have exited the tree.
     def validate(self):
-        if self.name == '□':
-            return False
+        if self.name == "\"□\"" or self.name == "\"F\"":
+            return "Invalid:Final tree contains open nodes"
+        elif self.ispos == 1:
+            return "Invalid:We haven't exited out of the tree"
         for child in self.children:
-            if child.validate() == False:
-                return False
-        return True
+            output = child.validate()
+            if output != "Valid":
+                return output
+        return "Valid"
 
 
-#Some functions used in order to manipulate the trees in the algorithm
+#Some auxiliary functions.
 
 #Checks if the symbol is a letter, which means we have reached an atomic propositon.
 def isAtomic(symbol):
-    if ('a' <= symbol and symbol <= 'z') or ('A' <= symbol and symbol <= 'Z'):
+    if ('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z'):
         return True
     return False
 
@@ -66,24 +79,27 @@ def step(Pos,symbol):
     #If the symbol rerpresents an atomic proposition we write it and move up to the parent node.
     elif isAtomic(symbol) == True:
         output = Pos.rename(symbol)
-        Pos.ispos = 0
-        Pos = Pos.parent
-        if Pos != 0:
-            Pos.ispos = 1
+        if output == "Valid":
+            Pos.ispos = 0
+            Pos = Pos.parent
+            if Pos != 0:
+                Pos.ispos = 1
 
     #Logical connectives get written and move down to the first available child of the node.
     elif isConnective(symbol) == True:
         output = Pos.rename(symbol)
-        ok = 0
-        for child in Pos.children:
-            if child.name == '□':
-                ok = 1
-                Pos.ispos = 0
-                Pos = child
-                Pos.ispos = 1
-                break
-        if ok == 0 and output == "Valid":
-            output = "Invalid"
+        if output == "Valid":
+            ok = 0
+            for child in Pos.children:
+                if child.name == "\"F\"":
+                    ok = 1
+                    Pos.ispos = 0
+                    Pos = child
+                    Pos.ispos = 1
+                    break
+        #If the node doesn't have any open subtree nodes but we need to move to one something went wrong.
+            if ok == 0:
+                output = "Invalid:We need to move to and open subtree node, but there are none to move to."
 
     #Closed paranthesis moves us to the parent of the current node.
     elif symbol == ')':
@@ -98,23 +114,26 @@ def step(Pos,symbol):
     
     return output,Pos
 
-#The algorithm in question
+#The parsing algorithm
 Trees = []
 Pos = 0
 with open("Parsing_Input.txt",'r') as f:
     Prop = f.readlines()
 
-
+f = open("Parsing_Output.txt",'w')
+f.write("Note: This solution was written with the help of an algorithm. Because of that I have used a \"folder\" notation for the tree in order to make it easier to print.\n\n")
 for i in range(len(Prop)):
     output = "Valid"
+    
     #Each exercise will be written in a different text file, because some solutions may take up a lot of space.
-    f = open("Parsing_Output_{}.txt".format(Prop[i][1]),'w')
+
     #Prints the letter denoting our current exercise.
     f.write("".join([Prop[i][0],Prop[i][1],Prop[i][2],'\n']))
+
     #Removes unnecasary characters.
     Prop[i] = Prop[i][4:-2]
 
-    Trees.append(Tree("□"))
+    Trees.append(Tree("\"F\""))
     Pos = Trees[i]
     Pos.ispos = 1
     stp = 0
@@ -125,52 +144,56 @@ for i in range(len(Prop)):
         #In order not to print too much unnnecesary information, blank spaces are skipped, that's why we can't use j as a counter for the steps and need an extra variable.
         if symbol != ' ':
             stp += 1
+            #The outputs are written in separate text files.
             f.write("Step {}, Symbol '{}':\n".format(stp,symbol))
 
             #Separate step for '(' as we need to know if the next symbol is '¬' or another logical connective.
             if symbol == '(':
+                Pos.name = "\"□\""
                 if i == len(Prop[i]) - 1:
                     output = "Invalid:The character \'(\' can never be found at the end of a valid propositional formula."
 
-                #Create a child node but don't switch to it as the next step will write '¬' in the current node.
+                #Create an open subtree node but don't switch to it as the next step will write '¬' in the current node.
+                #If the appending would lead to more than one child for the current node we know something went wrong.
                 elif Prop[i][j+1] == '¬':
-                    Pos.append('□')
+                    if Pos.children != []:
+                        output = "Invalid:The next step would print the '¬' connective here, but the structure of the subtree woudn't be correct in that case."
+                    Pos.append("\"F\"")
 
-                #Create two child nodes for the two propositions the connective connects and switch to the first one.
+                #Create two open subtree nodes for the two propositions the connective will connect and switch to the first one.
+                #If the appending would lead to more than 2 children for the current node we know something went wrong.
                 else:
-                    Pos.append('□')
-                    Pos.append('□')
-                    ok = 0
+                    if Pos.children != []:
+                        output = "Invalid:A node may have at most 2 children."
+                    Pos.append("\"F\"")
+                    Pos.append("\"F\"")
                     for child in Pos.children:
-                        if child.name == '□':
-                            ok = 1
+                        if child.name == "\"F\"":
                             Pos.ispos = 0
                             Pos = child
                             Pos.ispos = 1
                             break
-                    if ok == 0 and output == "Valid":
-                        output = "Invalid"
 
             #If we don't have an open paranthesis we can move on to the other cases.
             else:
                 output,Pos = step(Pos,symbol)
-
-            #If any problem is detected the algorithm will stop.
-            if output != "Valid":
-                break
                 
             #At each step we show the tree.
             f.write(Trees[i].visualize(0) + '\n')
 
-            #If we exit the tree too early, the string is invalid.
+            #We must not exit the tree too early.
             if Pos == 0 and j != len(Prop[i]) - 1:
-                output = "Invalid"
+                output = "Invalid:We exited the tree too early."
                 break
 
-    #Final validation after we exit the tree properly.
-    if Trees[i].validate() == False:
-        output = "Invalid"
+            #If any problem is detected the algorithm will stop.
+            if output != "Valid":
+                break
 
-    f.write(output + "\n\n")
+    #If we run out of characters and no problems were detected yet, we need to check if there are any open nodes left and if we have exited the tree.
+    if output == "Valid":
+        output = Trees[i].validate()
+
+    f.write(output + "\n\n\n")
 
 f.close()

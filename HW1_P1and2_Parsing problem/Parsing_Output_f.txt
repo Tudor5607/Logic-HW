@@ -1,119 +1,119 @@
 (f)
 Step 1, Symbol '(':
-□
-    □<- Current position
-    □
+"□"
+    "F"<--
+    "F"
 
 Step 2, Symbol '(':
-□
-    □
-        □<- Current position
-        □
-    □
+"□"
+    "□"
+        "F"<--
+        "F"
+    "F"
 
 Step 3, Symbol '(':
-□
-    □
-        □
-            □<- Current position
-            □
-        □
-    □
+"□"
+    "□"
+        "□"
+            "F"<--
+            "F"
+        "F"
+    "F"
 
 Step 4, Symbol 'A':
-□
-    □
-        □<- Current position
+"□"
+    "□"
+        "□"<--
             A
-            □
-        □
-    □
+            "F"
+        "F"
+    "F"
 
 Step 5, Symbol '∨':
-□
-    □
+"□"
+    "□"
         ∨
             A
-            □<- Current position
-        □
-    □
+            "F"<--
+        "F"
+    "F"
 
 Step 6, Symbol 'B':
-□
-    □
-        ∨<- Current position
+"□"
+    "□"
+        ∨<--
             A
             B
-        □
-    □
+        "F"
+    "F"
 
 Step 7, Symbol ')':
-□
-    □<- Current position
+"□"
+    "□"<--
         ∨
             A
             B
-        □
-    □
+        "F"
+    "F"
 
 Step 8, Symbol '∧':
-□
+"□"
     ∧
         ∨
             A
             B
-        □<- Current position
-    □
+        "F"<--
+    "F"
 
 Step 9, Symbol '(':
-□
+"□"
     ∧
         ∨
             A
             B
-        □<- Current position
-            □
-    □
+        "□"<--
+            "F"
+    "F"
 
 Step 10, Symbol '¬':
-□
+"□"
     ∧
         ∨
             A
             B
         ¬
-            □<- Current position
-    □
+            "F"<--
+    "F"
 
 Step 11, Symbol 'C':
-□
+"□"
     ∧
         ∨
             A
             B
-        ¬<- Current position
+        ¬<--
             C
-    □
+    "F"
 
 Step 12, Symbol ')':
-□
-    ∧<- Current position
+"□"
+    ∧<--
         ∨
             A
             B
         ¬
             C
-    □
+    "F"
 
 Step 13, Symbol ')':
-□<- Current position
+"□"<--
     ∧
         ∨
             A
             B
         ¬
             C
-    □
+    "F"
 
 Step 14, Symbol '⇒':
 ⇒
@@ -123,7 +123,7 @@ Step 14, Symbol '⇒':
             B
         ¬
             C
-    □<- Current position
+    "F"<--
 
 Step 15, Symbol '(':
 ⇒
@@ -133,9 +133,9 @@ Step 15, Symbol '(':
             B
         ¬
             C
-    □
-        □<- Current position
-        □
+    "□"
+        "F"<--
+        "F"
 
 Step 16, Symbol '(':
 ⇒
@@ -145,11 +145,11 @@ Step 16, Symbol '(':
             B
         ¬
             C
-    □
-        □
-            □<- Current position
-            □
-        □
+    "□"
+        "□"
+            "F"<--
+            "F"
+        "F"
 
 Step 17, Symbol 'D':
 ⇒
@@ -159,11 +159,11 @@ Step 17, Symbol 'D':
             B
         ¬
             C
-    □
-        □<- Current position
+    "□"
+        "□"<--
             D
-            □
-        □
+            "F"
+        "F"
 
 Step 18, Symbol '⇔':
 ⇒
@@ -173,11 +173,11 @@ Step 18, Symbol '⇔':
             B
         ¬
             C
-    □
+    "□"
         ⇔
             D
-            □<- Current position
-        □
+            "F"<--
+        "F"
 
 Step 19, Symbol 'E':
 ⇒
@@ -187,11 +187,11 @@ Step 19, Symbol 'E':
             B
         ¬
             C
-    □
-        ⇔<- Current position
+    "□"
+        ⇔<--
             D
             E
-        □
+        "F"
 
 Step 20, Symbol ')':
 ⇒
@@ -201,25 +201,25 @@ Step 20, Symbol ')':
             B
         ¬
             C
-    □<- Current position
+    "□"<--
         ⇔
             D
             E
-        □
+        "F"
 
 Step 21, Symbol ')':
-⇒<- Current position
+⇒<--
     ∧
         ∨
             A
             B
         ¬
             C
-    □
+    "□"
         ⇔
             D
             E
-        □
+        "F"
 
 Step 22, Symbol ')':
 ⇒
@@ -229,11 +229,11 @@ Step 22, Symbol ')':
             B
         ¬
             C
-    □
+    "□"
         ⇔
             D
             E
-        □
+        "F"
 
-Invalid
+Invalid:Final tree contains open nodes
 

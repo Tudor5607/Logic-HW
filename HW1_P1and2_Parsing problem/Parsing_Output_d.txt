@@ -1,57 +1,57 @@
 (d)
 Step 1, Symbol '(':
-□
-    □<- Current position
-    □
+"□"
+    "F"<--
+    "F"
 
 Step 2, Symbol 'P':
-□<- Current position
+"□"<--
     P
-    □
+    "F"
 
 Step 3, Symbol '∧':
 ∧
     P
-    □<- Current position
+    "F"<--
 
 Step 4, Symbol '(':
 ∧
     P
-    □
-        □<- Current position
-        □
+    "□"
+        "F"<--
+        "F"
 
 Step 5, Symbol '(':
 ∧
     P
-    □
-        □<- Current position
-            □
-        □
+    "□"
+        "□"<--
+            "F"
+        "F"
 
 Step 6, Symbol '¬':
 ∧
     P
-    □
+    "□"
         ¬
-            □<- Current position
-        □
+            "F"<--
+        "F"
 
 Step 7, Symbol 'Q':
 ∧
     P
-    □
-        ¬<- Current position
+    "□"
+        ¬<--
             Q
-        □
+        "F"
 
 Step 8, Symbol ')':
 ∧
     P
-    □<- Current position
+    "□"<--
         ¬
             Q
-        □
+        "F"
 
 Step 9, Symbol '∧':
 ∧
@@ -59,7 +59,7 @@ Step 9, Symbol '∧':
     ∧
         ¬
             Q
-        □<- Current position
+        "F"<--
 
 Step 10, Symbol '(':
 ∧
@@ -67,8 +67,8 @@ Step 10, Symbol '(':
     ∧
         ¬
             Q
-        □<- Current position
-            □
+        "□"<--
+            "F"
 
 Step 11, Symbol '¬':
 ∧
@@ -77,7 +77,7 @@ Step 11, Symbol '¬':
         ¬
             Q
         ¬
-            □<- Current position
+            "F"<--
 
 Step 12, Symbol '(':
 ∧
@@ -86,8 +86,8 @@ Step 12, Symbol '(':
         ¬
             Q
         ¬
-            □<- Current position
-                □
+            "□"<--
+                "F"
 
 Step 13, Symbol '¬':
 ∧
@@ -97,7 +97,7 @@ Step 13, Symbol '¬':
             Q
         ¬
             ¬
-                □<- Current position
+                "F"<--
 
 Step 14, Symbol '(':
 ∧
@@ -107,9 +107,9 @@ Step 14, Symbol '(':
             Q
         ¬
             ¬
-                □
-                    □<- Current position
-                    □
+                "□"
+                    "F"<--
+                    "F"
 
 Step 15, Symbol 'Q':
 ∧
@@ -119,9 +119,9 @@ Step 15, Symbol 'Q':
             Q
         ¬
             ¬
-                □<- Current position
+                "□"<--
                     Q
-                    □
+                    "F"
 
 Step 16, Symbol '⇔':
 ∧
@@ -133,7 +133,7 @@ Step 16, Symbol '⇔':
             ¬
                 ⇔
                     Q
-                    □<- Current position
+                    "F"<--
 
 Step 17, Symbol '(':
 ∧
@@ -145,8 +145,8 @@ Step 17, Symbol '(':
             ¬
                 ⇔
                     Q
-                    □<- Current position
-                        □
+                    "□"<--
+                        "F"
 
 Step 18, Symbol '¬':
 ∧
@@ -159,7 +159,7 @@ Step 18, Symbol '¬':
                 ⇔
                     Q
                     ¬
-                        □<- Current position
+                        "F"<--
 
 Step 19, Symbol 'R':
 ∧
@@ -171,7 +171,7 @@ Step 19, Symbol 'R':
             ¬
                 ⇔
                     Q
-                    ¬<- Current position
+                    ¬<--
                         R
 
 Step 20, Symbol ')':
@@ -182,7 +182,7 @@ Step 20, Symbol ')':
             Q
         ¬
             ¬
-                ⇔<- Current position
+                ⇔<--
                     Q
                     ¬
                         R
@@ -194,7 +194,7 @@ Step 21, Symbol ')':
         ¬
             Q
         ¬
-            ¬<- Current position
+            ¬<--
                 ⇔
                     Q
                     ¬
@@ -206,7 +206,7 @@ Step 22, Symbol ')':
     ∧
         ¬
             Q
-        ¬<- Current position
+        ¬<--
             ¬
                 ⇔
                     Q
@@ -216,7 +216,7 @@ Step 22, Symbol ')':
 Step 23, Symbol ')':
 ∧
     P
-    ∧<- Current position
+    ∧<--
         ¬
             Q
         ¬
@@ -227,7 +227,7 @@ Step 23, Symbol ')':
                         R
 
 Step 24, Symbol ')':
-∧<- Current position
+∧<--
     P
     ∧
         ¬
