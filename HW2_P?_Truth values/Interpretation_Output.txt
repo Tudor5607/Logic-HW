@@ -1,0 +1,85 @@
+(a)
+∧
+  ⇒
+    P
+    Q
+  ∧
+    ¬
+      Q
+    P
+
+∧
+  ⇒
+    P
+    Q
+  ∧
+    ¬
+      True
+    P
+
+∧
+  ⇒
+    True
+    True
+  ∧
+    False
+    True
+
+∧
+  True
+  False
+
+False
+
+(b)
+⇒
+  ⇒
+    P
+    Q
+  ⇒
+    Q
+    P
+
+⇒
+  ⇒
+    False
+    False
+  ⇒
+    False
+    False
+
+⇒
+  True
+  True
+
+True
+
+(c)
+∧
+  ¬
+    ∨
+      P
+      Q
+  ¬
+    Q
+
+∧
+  ¬
+    ∨
+      True
+      False
+  ¬
+    Q
+
+∧
+  ¬
+    True
+  ¬
+    False
+
+∧
+  False
+  True
+
+False
+

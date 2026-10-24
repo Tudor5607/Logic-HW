@@ -1,0 +1,6 @@
+(a) ((P ⇒ Q) ∧ ((¬Q) ∧ P)),
+P:True, Q:True
+(b) ((P ⇒ Q) ⇒ (Q ⇒ P)),
+P:False, Q:False
+(c) ((¬(P ∨ Q)) ∧ (¬Q)),
+P:True, Q:False

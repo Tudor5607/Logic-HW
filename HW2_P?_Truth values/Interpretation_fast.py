@@ -76,31 +76,8 @@ def step(Pos,symbol):
     
     return Pos
 
-#Algorithm that builds the abstract syntax and then evaluates the value of the proposition.
-Trees = []
-Pos = 0
-with open("Interpretation_Input.txt",'r') as f:
-    Prop = f.readlines()
-
-
-f = open("Interpretation_Output.txt",'w')
-i = 0
-l = len(Prop)
-while i < l:
-    v = {}
-    #Prints the letter denoting our current exercise.
-    f.write("".join([Prop[i][0],Prop[i][1],Prop[i][2]," "]))
-    #Removes unnecasary characters.
-    Prop[i] = Prop[i][4:]
-    #Create the dictionary for the interpretations of the propositional variables.
-    Prop[i+1] = Prop[i+1].split()
-    for pair in Prop[i+1]:
-        pair.strip(',.')
-        if pair[2] == 'T':
-            v[pair[0]] = True
-        else:
-            v[pair[0]] = False
-
+#I feel like the name is self explanatory for this one.
+def createAbstractSyntax(Trees):
     Trees.append(Tree("□"))
     Pos = Trees[i//2]
 
@@ -126,6 +103,37 @@ while i < l:
         #If we don't have an open paranthesis we can move on to the other cases.
         else:
             Pos = step(Pos,symbol)
+
+
+#Algorithm that builds the abstract syntax and then evaluates the value of the proposition.
+Trees = []
+Pos = 0
+with open("Interpretation_Input_test.txt",'r') as f:
+    Prop = f.readlines()
+
+
+f = open("Interpretation_Output_test.txt",'w')
+i = 0
+l = len(Prop)
+while i < l:
+    v = {}
+    
+    #Prints the letter denoting our current exercise.
+    f.write("".join([Prop[i][0],Prop[i][1],Prop[i][2]," "]))
+
+    #Removes unnecasary characters.
+    Prop[i] = Prop[i][4:]
+
+    #Create the dictionary for the interpretations of the propositional variables.
+    Prop[i+1] = Prop[i+1].split()
+    for pair in Prop[i+1]:
+        pair.strip(',.')
+        if pair[2] == 'T':
+            v[pair[0]] = True
+        else:
+            v[pair[0]] = False
+
+    createAbstractSyntax(Trees)
 
     f.write(str(Trees[i//2].evaluate(v)) + "\n")
     i += 2
