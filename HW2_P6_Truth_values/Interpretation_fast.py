@@ -107,7 +107,6 @@ def createAbstractSyntax(Trees):
 
 #Algorithm that builds the abstract syntax and then evaluates the value of the proposition.
 Trees = []
-Pos = 0
 with open("Interpretation_Input_test.txt",'r') as f:
     Prop = f.readlines()
 
