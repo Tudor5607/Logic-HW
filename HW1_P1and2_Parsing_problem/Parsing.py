@@ -117,10 +117,10 @@ def step(Pos,symbol):
 #The parsing algorithm
 Trees = []
 Pos = 0
-with open("Parsing_Input.txt",'r') as f:
+with open(r"HW1_P1and2_Parsing_problem/Parsing_Input.txt",'r') as f:
     Prop = f.readlines()
 
-f = open("Parsing_Output.txt",'w')
+f = open(r"HW1_P1and2_Parsing_problem/Parsing_Output.txt",'w')
 f.write("Note: This solution was written with the help of an algorithm. Because of that I have used a \"folder\" notation for the tree in order to make it easier to print.\n\n")
 for i in range(len(Prop)):
     output = "Valid"

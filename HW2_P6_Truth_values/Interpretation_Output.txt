@@ -1,4 +1,10 @@
-(a)
+Given that we only compute the truth value of each proposition under a single interpretation
+and for any propositional formula with n>0 propositional variables we have 2^n interpretations,
+we cannot say anything about the validity or nonsatisfiability of these formulas,
+as for these properties we need to check all interpretations.
+
+(a)P:True, Q:True
+
 ∧
   ⇒
     P
@@ -31,7 +37,10 @@
 
 False
 
-(b)
+Because for this specific interpretation the formula evaluates to False, we can say the formula is invalid.
+
+(b)P:False, Q:False
+
 ⇒
   ⇒
     P
@@ -54,7 +63,9 @@ False
 
 True
 
-(c)
+Because for this specific interpretation the formula evaluates to True, we can say the formula is satisfiable.
+
+(c)P:True, Q:False
 ∧
   ¬
     ∨
@@ -82,4 +93,6 @@ True
   True
 
 False
+
+Because for this specific interpretation the formula evaluates to False, we can say the formula is invalid.
 

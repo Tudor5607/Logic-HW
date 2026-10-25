@@ -1,3 +1,4 @@
+#Generates all possible interpretations for the list of variables "vars" by using the method of binary counting.
 def generateInterpretations(vars):
     I = {}
     for var in vars:
