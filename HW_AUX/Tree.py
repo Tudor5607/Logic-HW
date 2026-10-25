@@ -42,3 +42,12 @@ class Tree:
             return (p and q) or ((not p) and (not q))
         else:
             return v[self.name]
+
+        def getLeaves(self):
+            Leaves = []
+            if self.children == []:
+                leaves.append(self.name)
+            else:
+                for child in self.children:
+                    child.getLeaves()
+            return Leaves
