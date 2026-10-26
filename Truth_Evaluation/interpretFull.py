@@ -14,7 +14,7 @@ with open(r"HW2_P6_Truth_values/Interpretation_Input.txt",'r') as f:
 
 
 if __name__ == "__main__":
-    f = open(r"HW2_P6_Truth_values/Interpretation_Output.txt",'w')
+    f = open("HW2_P6_Truth_values/Interpretation_Output.txt",'w')
     i = 0
     l = len(Prop)
     d = {"True":"satisfiable","False":"invalid"}

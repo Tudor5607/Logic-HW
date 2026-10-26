@@ -1,4 +1,0 @@
-(a) (((P ⇒ Q) ∨ S) ⇔ T)
-P:True, Q:False, S:False, T:False
-(d) (P ∧ ((¬Q) ∧ (¬(¬(Q ⇔ (¬R))))))
-P:True, Q:False, R:False

@@ -1,4 +1,4 @@
-#The tree class that will store our propositions
+#Will be used to construct a tree object.
 class Tree:
     #Constructor.
     def __init__(self,name):
@@ -15,9 +15,9 @@ class Tree:
         Node.depth = self.depth+1
         self.children.append(Node)
 
-    #Returns a string that is a visualization of the tree.
+    #Returns a string that is a visualization of the tree, along with our position in the tree (if it exists).
     def visualize(self):
-        output = "  "*self.depth + self.name + '\n'
+        output = "  "*self.depth + self.name + "<--"*self.ispos + '\n'
         for child in self.children:
             output += child.visualize()
         return output
@@ -43,11 +43,13 @@ class Tree:
         else:
             return v[self.name]
 
-        def getLeaves(self):
-            Leaves = []
-            if self.children == []:
-                leaves.append(self.name)
-            else:
-                for child in self.children:
-                    child.getLeaves()
-            return Leaves
+    #Returns a list containiing the leaves of the tree that had this node as root, from left to right
+    def getLeaves(self):
+        Leaves = []
+        if self.children == []:
+            leaves.append(self.name)
+        else:
+            for child in self.children:
+                child.getLeaves()
+        return Leavesdd
+
