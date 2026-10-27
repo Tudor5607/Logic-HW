@@ -12,7 +12,7 @@ def isTruthValue(sth):
 
 #Checks if the symbol is an atomic proposition.
 def isAtomic(symbol):
-    if (('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z')) and (symbol != "True" and symbol != "False"):
+    if ('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z'):
         return True
     return False
 

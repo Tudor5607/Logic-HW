@@ -1,0 +1,420 @@
+(a)
+Expect:0
+Queue:[]
+Stack:[]
+
+Symbol:'P'
+Expect:0
+Queue:['P']
+Stack:[]
+
+Symbol:'∧'
+Expect:1
+Queue:['P']
+Stack:['∧']
+
+Symbol:'Q'
+Expect:0
+Queue:['P', 'Q']
+Stack:['∧']
+
+Symbol:'⇒'
+Expect:1
+Queue:['P', 'Q', '∧']
+Stack:['⇒']
+
+Symbol:'R'
+Expect:0
+Queue:['P', 'Q', '∧', 'R']
+Stack:['⇒']
+
+Symbol:'¬'
+Expect:1
+Queue:['P', 'Q', '∧', 'R']
+Stack:['⇒']
+
+Invalid:Expected a different symbol here.
+
+(b)
+Expect:0
+Queue:[]
+Stack:[]
+
+Symbol:'P'
+Expect:0
+Queue:['P']
+Stack:[]
+
+Symbol:'⇒'
+Expect:1
+Queue:['P']
+Stack:['⇒']
+
+Symbol:'¬'
+Expect:0
+Queue:['P']
+Stack:['⇒', '¬']
+
+Symbol:'¬'
+Expect:0
+Queue:['P']
+Stack:['⇒', '¬', '¬']
+
+Symbol:'¬'
+Expect:0
+Queue:['P']
+Stack:['⇒', '¬', '¬', '¬']
+
+Symbol:'¬'
+Expect:0
+Queue:['P']
+Stack:['⇒', '¬', '¬', '¬', '¬']
+
+Symbol:'¬'
+Expect:0
+Queue:['P']
+Stack:['⇒', '¬', '¬', '¬', '¬', '¬']
+
+Symbol:'B'
+Expect:0
+Queue:['P', 'B']
+Stack:['⇒', '¬', '¬', '¬', '¬', '¬']
+
+Symbol:'⇔'
+Expect:1
+Queue:['P', 'B', '¬', '¬', '¬', '¬', '¬', '⇒']
+Stack:['⇔']
+
+Symbol:'Q'
+Expect:0
+Queue:['P', 'B', '¬', '¬', '¬', '¬', '¬', '⇒', 'Q']
+Stack:['⇔']
+
+Symbol:'∧'
+Expect:1
+Queue:['P', 'B', '¬', '¬', '¬', '¬', '¬', '⇒', 'Q']
+Stack:['⇔', '∧']
+
+Symbol:'S'
+Expect:0
+Queue:['P', 'B', '¬', '¬', '¬', '¬', '¬', '⇒', 'Q', 'S']
+Stack:['⇔', '∧']
+
+Queue:['⇔', '∧', 'S', 'Q', '⇒', '¬', '¬', '¬', '¬', '¬', 'B', 'P']
+Stack:[]
+
+Symbol:⇔
+"F"<--
+
+Symbol:∧
+⇔
+  "F"
+  "F"<--
+
+Symbol:S
+⇔
+  "F"
+  ∧
+    "F"
+    "F"<--
+
+Symbol:Q
+⇔
+  "F"
+  ∧
+    "F"<--
+    S
+
+Symbol:⇒
+⇔
+  "F"<--
+  ∧
+    Q
+    S
+
+Symbol:¬
+⇔
+  ⇒
+    "F"
+    "F"<--
+  ∧
+    Q
+    S
+
+Symbol:¬
+⇔
+  ⇒
+    "F"
+    ¬
+      "F"<--
+  ∧
+    Q
+    S
+
+Symbol:¬
+⇔
+  ⇒
+    "F"
+    ¬
+      ¬
+        "F"<--
+  ∧
+    Q
+    S
+
+Symbol:¬
+⇔
+  ⇒
+    "F"
+    ¬
+      ¬
+        ¬
+          "F"<--
+  ∧
+    Q
+    S
+
+Symbol:¬
+⇔
+  ⇒
+    "F"
+    ¬
+      ¬
+        ¬
+          ¬
+            "F"<--
+  ∧
+    Q
+    S
+
+Symbol:B
+⇔
+  ⇒
+    "F"
+    ¬
+      ¬
+        ¬
+          ¬
+            ¬
+              "F"<--
+  ∧
+    Q
+    S
+
+Symbol:P
+⇔
+  ⇒
+    "F"<--
+    ¬
+      ¬
+        ¬
+          ¬
+            ¬
+              B
+  ∧
+    Q
+    S
+
+⇔
+  ⇒
+    P
+    ¬
+      ¬
+        ¬
+          ¬
+            ¬
+              B
+  ∧
+    Q
+    S
+
+Valid propositional formula in relaxed syntax.
+
+(c)
+Expect:0
+Queue:[]
+Stack:[]
+
+Symbol:'P'
+Expect:0
+Queue:['P']
+Stack:[]
+
+Symbol:'∨'
+Expect:1
+Queue:['P']
+Stack:['∨']
+
+Symbol:'('
+Expect:0
+Queue:['P']
+Stack:['∨', '(']
+
+Symbol:'Q'
+Expect:0
+Queue:['P', 'Q']
+Stack:['∨', '(']
+
+Symbol:'∧'
+Expect:1
+Queue:['P', 'Q']
+Stack:['∨', '(', '∧']
+
+Symbol:'¬'
+Expect:0
+Queue:['P', 'Q']
+Stack:['∨', '(', '∧', '¬']
+
+Symbol:'R'
+Expect:0
+Queue:['P', 'Q', 'R']
+Stack:['∨', '(', '∧', '¬']
+
+Symbol:')'
+Expect:1
+Queue:['P', 'Q', 'R', '¬', '∧']
+Stack:['∨']
+
+Symbol:'⇒'
+Expect:1
+Queue:['P', 'Q', 'R', '¬', '∧', '∨']
+Stack:['⇒']
+
+Symbol:'S'
+Expect:0
+Queue:['P', 'Q', 'R', '¬', '∧', '∨', 'S']
+Stack:['⇒']
+
+Symbol:'∨'
+Expect:1
+Queue:['P', 'Q', 'R', '¬', '∧', '∨', 'S']
+Stack:['⇒', '∨']
+
+Symbol:'T'
+Expect:0
+Queue:['P', 'Q', 'R', '¬', '∧', '∨', 'S', 'T']
+Stack:['⇒', '∨']
+
+Queue:['⇒', '∨', 'T', 'S', '∨', '∧', '¬', 'R', 'Q', 'P']
+Stack:[]
+
+Symbol:⇒
+"F"<--
+
+Symbol:∨
+⇒
+  "F"
+  "F"<--
+
+Symbol:T
+⇒
+  "F"
+  ∨
+    "F"
+    "F"<--
+
+Symbol:S
+⇒
+  "F"
+  ∨
+    "F"<--
+    T
+
+Symbol:∨
+⇒
+  "F"<--
+  ∨
+    S
+    T
+
+Symbol:∧
+⇒
+  ∨
+    "F"
+    "F"<--
+  ∨
+    S
+    T
+
+Symbol:¬
+⇒
+  ∨
+    "F"
+    ∧
+      "F"
+      "F"<--
+  ∨
+    S
+    T
+
+Symbol:R
+⇒
+  ∨
+    "F"
+    ∧
+      "F"
+      ¬
+        "F"<--
+  ∨
+    S
+    T
+
+Symbol:Q
+⇒
+  ∨
+    "F"
+    ∧
+      "F"<--
+      ¬
+        R
+  ∨
+    S
+    T
+
+Symbol:P
+⇒
+  ∨
+    "F"<--
+    ∧
+      Q
+      ¬
+        R
+  ∨
+    S
+    T
+
+⇒
+  ∨
+    P
+    ∧
+      Q
+      ¬
+        R
+  ∨
+    S
+    T
+
+Valid propositional formula in relaxed syntax.
+
+(d)
+Expect:0
+Queue:[]
+Stack:[]
+
+Symbol:'('
+Expect:0
+Queue:[]
+Stack:['(']
+
+Symbol:'P'
+Expect:0
+Queue:['P']
+Stack:['(']
+
+Symbol:','
+Expect:1
+Queue:['P']
+Stack:['(']
+
+Invalid:Proposition contains undefined symbols.
+
