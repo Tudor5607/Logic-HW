@@ -112,7 +112,8 @@ for exp in exps:
     #d = [['(','¬',"var"],[')','∧','∨','⇒','⇔']]  
     expect = 0
     f.write("Expect:{}\nQueue:{}\nStack:{}\n\n".format(expect,Q,S))
-
+    if exp[-1] != ')' and (not isAtomic(exp[-1])):
+        error = "Invalid:A valid proposition may only end with a closed paranthesis or a propositional variable."
     for symb in exp:
         
         if error != "No errors":
@@ -133,7 +134,7 @@ for exp in exps:
 
             #For logical connectives we may need to check precedence first.
             elif isConnective(symb):
-                if (expect == 1 and symb != '¬') or expect == 0:
+                if (expect == 1 and symb != '¬') or (expect == 0 and symb == '¬'):
                     A = Symbol(symb)
                     if len(S) == 0 or S[-1] == '(':
                         S.append(A)
@@ -159,13 +160,16 @@ for exp in exps:
             #A closed paranthesis must have an accompanying open paranthesis to determine the priority of connectives.
             elif symb == ')':
                 if expect == 1:
-                    while len(S) != 0 and S[-1] != '(':
-                        Q.append(S[-1].name)
-                        S.pop()
-                    if len(S) == 0:
-                        error = "Invalid:Proposition contains an unclosed right parenthesis."
+                    if S[-1] == '(':
+                        error = "Invalid:Unnecessary parentheses"
                     else:
-                        S.pop()
+                        while len(S) != 0 and S[-1] != '(':
+                            Q.append(S[-1].name)
+                            S.pop()
+                        if len(S) == 0:
+                            error = "Invalid:Proposition contains an unclosed right parenthesis."
+                        else:
+                            S.pop()
                     #After a closed paranthesis we expect either another closed paranthesis or a binary logical connective.
                 else:
                     error = "Invalid:Expected a different symbol here."

@@ -23,15 +23,20 @@ Expect:1
 Queue:['P', 'Q', '∧']
 Stack:['⇒']
 
-Symbol:'R'
-Expect:0
-Queue:['P', 'Q', '∧', 'R']
-Stack:['⇒']
-
 Symbol:'¬'
+Expect:0
+Queue:['P', 'Q', '∧']
+Stack:['⇒', '¬']
+
+Symbol:'B'
+Expect:0
+Queue:['P', 'Q', '∧', 'B']
+Stack:['⇒', '¬']
+
+Symbol:'('
 Expect:1
-Queue:['P', 'Q', '∧', 'R']
-Stack:['⇒']
+Queue:['P', 'Q', '∧', 'B']
+Stack:['⇒', '¬']
 
 Invalid:Expected a different symbol here.
 
@@ -401,20 +406,5 @@ Expect:0
 Queue:[]
 Stack:[]
 
-Symbol:'('
-Expect:0
-Queue:[]
-Stack:['(']
-
-Symbol:'P'
-Expect:0
-Queue:['P']
-Stack:['(']
-
-Symbol:','
-Expect:1
-Queue:['P']
-Stack:['(']
-
-Invalid:Proposition contains undefined symbols.
+Invalid:A valid proposition may only end with a closed paranthesis or a propositional variable.
 
