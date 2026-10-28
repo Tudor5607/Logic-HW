@@ -23,20 +23,15 @@ Expect:1
 Queue:['P', 'Q', '∧']
 Stack:['⇒']
 
+Symbol:'R'
+Expect:0
+Queue:['P', 'Q', '∧', 'R']
+Stack:['⇒']
+
 Symbol:'¬'
-Expect:0
-Queue:['P', 'Q', '∧']
-Stack:['⇒', '¬']
-
-Symbol:'B'
-Expect:0
-Queue:['P', 'Q', '∧', 'B']
-Stack:['⇒', '¬']
-
-Symbol:'('
 Expect:1
-Queue:['P', 'Q', '∧', 'B']
-Stack:['⇒', '¬']
+Queue:['P', 'Q', '∧', 'R']
+Stack:['⇒']
 
 Invalid:Expected a different symbol here.
 
@@ -233,6 +228,8 @@ Symbol:P
     Q
     S
 
+⇔⇒P¬¬¬¬¬B∧QS
+
 Valid propositional formula in relaxed syntax.
 
 (c)
@@ -398,6 +395,8 @@ Symbol:P
   ∨
     S
     T
+
+⇒∨P∧Q¬R∨ST
 
 Valid propositional formula in relaxed syntax.
 

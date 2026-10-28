@@ -22,6 +22,13 @@ class Tree:
             output += child.visualize()
         return output
 
+    #Returns a string that is a visualization of the tree in polish notation. (recommended only for complete trees)
+    def polish(self):
+        output = self.name
+        for child in self.children:
+            output += child.polish()
+        return output
+
     #To be used after we exit the tree succesfully in order to determine if there are any open nodes left and if we have exited the tree.
     def validate(self):
         if self.name == "\"□\"" or self.name == "\"F\"":
@@ -201,6 +208,7 @@ for exp in exps:
     #If everything went fine, we can print the abstract syntax..
     if error == "No errors":
         f.write(T.visualize()+'\n')
+        f.write(T.polish()+"\n\n")
         f.write("Valid propositional formula in relaxed syntax.\n\n")
     else:
         f.write("".join([error,"\n\n"]))

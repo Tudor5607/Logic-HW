@@ -12,7 +12,6 @@ def interpret(Prop,I):
 with open(r"HW2_P6_Truth_values/Interpretation_Input.txt",'r') as f:
     Prop = f.readlines()
 
-
 if __name__ == "__main__":
     f = open("HW2_P6_Truth_values/Interpretation_Output.txt",'w')
     i = 0

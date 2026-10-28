@@ -114,6 +114,7 @@ Step 13, Symbol ')':
 
 Valid
 
+⇔∨⇒PQST
 
 (b)
 Step 1, Symbol '(':
@@ -259,7 +260,6 @@ Step 15, Symbol ')':
 
 Invalid:Final tree contains open nodes
 
-
 (c)
 Step 1, Symbol '(':
 "□"<--
@@ -289,7 +289,6 @@ Step 5, Symbol '(':
         "F"
 
 Invalid:The next step would print the '¬' connective here, but the structure of the subtree wouldn't be correct in that case.
-
 
 (d)
 Step 1, Symbol '(':
@@ -547,6 +546,7 @@ Step 25, Symbol ')':
 
 Valid
 
+∧P∧¬Q¬¬⇔Q¬R
 
 (e)
 Step 1, Symbol '(':
@@ -604,7 +604,6 @@ Step 8, Symbol '¬':
     "F"<--
 
 Invalid:Expected an atomic proposition here.
-
 
 (f)
 Step 1, Symbol '(':
@@ -845,7 +844,6 @@ Step 22, Symbol ')':
 
 Invalid:Final tree contains open nodes
 
-
 (g)
 Step 1, Symbol '(':
 "□"
@@ -983,7 +981,6 @@ Step 13, Symbol '∨':
     "F"
 
 Invalid:Current node is not open.
-
 
 (h)
 Step 1, Symbol '(':
@@ -1448,5 +1445,4 @@ Step 31, Symbol '∧':
     "F"
 
 Invalid:Current node is not open.
-
 

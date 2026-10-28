@@ -20,6 +20,13 @@ class Tree:
             output += child.visualize(level + 1)
         return output
 
+    #Returns a string that is a visualization of the tree in polish notation. (recommended only for complete trees)
+    def polish(self):
+        output = self.name
+        for child in self.children:
+            output += child.polish()
+        return output
+
     #Renames the current node if it is open. If it fails (the node isn't open) the algorithm we will change the state (here named "output") of the tree to invalid.
     def rename(self,newName):
         output = "Valid"
@@ -194,6 +201,9 @@ for i in range(len(Prop)):
     if output == "Valid":
         output = Trees[i].validate()
 
-    f.write(output + "\n\n\n")
+    f.write(output + "\n\n")
+
+    if output == "Valid":
+        f.write(Trees[i].polish() + "\n\n")
 
 f.close()
