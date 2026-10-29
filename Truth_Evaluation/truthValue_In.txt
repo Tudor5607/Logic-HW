@@ -1,13 +1,3 @@
-⇔
-  ⇒
-    P
-    ¬
-      ¬
-        ¬
-          ¬
-            ¬
-              B
-  ∧
-    Q
-    S
-Interpretation = All
+⇔∨⇒PQST
+⇔⇒P¬¬¬¬¬T∧QS
+Interpretation: P:True Q:False S:True T:False

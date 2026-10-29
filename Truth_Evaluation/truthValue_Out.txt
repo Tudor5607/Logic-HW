@@ -1,98 +1,110 @@
-Given that we only compute the truth value of each proposition under a single interpretation
-and for any propositional formula with n>0 propositional variables we have 2^n interpretations,
-we cannot say anything about the validity or nonsatisfiability of these formulas,
-as for these properties we need to check all interpretations.
-
-(a)P:True, Q:True
-
-∧
-  ⇒
-    P
-    Q
-  ∧
-    ¬
-      Q
-    P
-
-∧
-  ⇒
-    P
-    Q
-  ∧
-    ¬
-      True
-    P
-
-∧
-  ⇒
-    True
-    True
-  ∧
-    False
-    True
-
-∧
-  True
-  False
-
-False
-
-Because for this specific interpretation the formula evaluates to False, we can say the formula is invalid.
-
-(b)P:False, Q:False
-
-⇒
-  ⇒
-    P
-    Q
-  ⇒
-    Q
-    P
-
-⇒
-  ⇒
-    False
-    False
-  ⇒
-    False
-    False
-
-⇒
-  True
-  True
-
-True
-
-Because for this specific interpretation the formula evaluates to True, we can say the formula is satisfiable.
-
-(c)P:True, Q:False
-∧
-  ¬
-    ∨
+⇔
+  ∨
+    ⇒
       P
       Q
-  ¬
-    Q
+    S
+  T
 
-∧
-  ¬
-    ∨
+⇔
+  ∨
+    ⇒
       True
       False
-  ¬
-    Q
+    S
+  T
 
-∧
-  ¬
-    True
-  ¬
+⇔
+  ∨
     False
+    True
+  T
 
-∧
-  False
+⇔
   True
+  False
 
 False
 
-Because for this specific interpretation the formula evaluates to False, we can say the formula is invalid.
+⇔
+  ⇒
+    P
+    ¬
+      ¬
+        ¬
+          ¬
+            ¬
+              T
+  ∧
+    Q
+    S
+
+⇔
+  ⇒
+    P
+    ¬
+      ¬
+        ¬
+          ¬
+            ¬
+              False
+  ∧
+    Q
+    S
+
+⇔
+  ⇒
+    P
+    ¬
+      ¬
+        ¬
+          ¬
+            True
+  ∧
+    Q
+    S
+
+⇔
+  ⇒
+    P
+    ¬
+      ¬
+        ¬
+          False
+  ∧
+    Q
+    S
+
+⇔
+  ⇒
+    P
+    ¬
+      ¬
+        True
+  ∧
+    Q
+    S
+
+⇔
+  ⇒
+    P
+    ¬
+      False
+  ∧
+    Q
+    S
+
+⇔
+  ⇒
+    True
+    True
+  ∧
+    False
+    True
+
+⇔
+  True
+  False
+
+False
 

@@ -1,5 +1,3 @@
-from Tree import *
-from symbolF import *
 #Used to evaluate a proposition based on its abstract syntax. The evaluation is done only on level "endLevel". (v is our chosen interpretation)
 #Note that this function assumes that the tree already has a particular form.
 def evaluate(Node,endLevel,v):
