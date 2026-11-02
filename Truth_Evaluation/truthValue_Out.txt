@@ -1,110 +1,82 @@
-⇔
-  ∨
-    ⇒
-      P
+∧
+  ⇒
+    P
+    Q
+  ∧
+    ¬
       Q
-    S
-  T
+    P
 
-⇔
-  ∨
-    ⇒
-      True
+∧
+  ⇒
+    P
+    Q
+  ∧
+    ¬
       False
-    S
-  T
+    P
 
-⇔
-  ∨
-    False
+∧
+  ⇒
     True
-  T
+    False
+  ∧
+    True
+    True
 
-⇔
-  True
+∧
   False
+  True
 
 False
 
-⇔
+⇒
   ⇒
     P
-    ¬
-      ¬
-        ¬
-          ¬
-            ¬
-              T
-  ∧
     Q
-    S
-
-⇔
   ⇒
-    P
-    ¬
-      ¬
-        ¬
-          ¬
-            ¬
-              False
-  ∧
     Q
-    S
-
-⇔
-  ⇒
     P
-    ¬
-      ¬
-        ¬
-          ¬
-            True
-  ∧
-    Q
-    S
 
-⇔
-  ⇒
-    P
-    ¬
-      ¬
-        ¬
-          False
-  ∧
-    Q
-    S
-
-⇔
-  ⇒
-    P
-    ¬
-      ¬
-        True
-  ∧
-    Q
-    S
-
-⇔
-  ⇒
-    P
-    ¬
-      False
-  ∧
-    Q
-    S
-
-⇔
+⇒
   ⇒
     True
-    True
-  ∧
+    False
+  ⇒
     False
     True
 
-⇔
-  True
+⇒
   False
+  True
+
+True
+
+∧
+  ¬
+    ∨
+      P
+      Q
+  ¬
+    Q
+
+∧
+  ¬
+    ∨
+      True
+      False
+  ¬
+    Q
+
+∧
+  ¬
+    True
+  ¬
+    False
+
+∧
+  False
+  True
 
 False
 

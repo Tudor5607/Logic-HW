@@ -1,4 +1,5 @@
-(a)
+P ∧ Q ⇒ R¬B ∨ G
+
 Expect:0
 Queue:[]
 Stack:[]
@@ -35,7 +36,8 @@ Stack:['⇒']
 
 Invalid:Expected a different symbol here.
 
-(b)
+P ⇒ ¬¬¬¬¬B ⇔ Q ∧ S
+
 Expect:0
 Queue:[]
 Stack:[]
@@ -232,7 +234,8 @@ Symbol:P
 
 Valid propositional formula in relaxed syntax.
 
-(c)
+P ∨ (Q ∧ ¬R) ⇒ S ∨ T
+
 Expect:0
 Queue:[]
 Stack:[]
@@ -400,10 +403,26 @@ Symbol:P
 
 Valid propositional formula in relaxed syntax.
 
-(d)
+(P, Q) ⇒ R
+
 Expect:0
 Queue:[]
 Stack:[]
 
-Invalid:A valid proposition may only end with a closed paranthesis or a propositional variable.
+Symbol:'('
+Expect:0
+Queue:[]
+Stack:['(']
+
+Symbol:'P'
+Expect:0
+Queue:['P']
+Stack:['(']
+
+Symbol:','
+Expect:1
+Queue:['P']
+Stack:['(']
+
+Invalid:Proposition contains undefined symbols.
 

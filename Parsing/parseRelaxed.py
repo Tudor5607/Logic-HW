@@ -57,7 +57,7 @@ class Symbol:
 
 #Checks if the symbol is an atomic proposition.
 def isAtomic(symbol):
-    if ('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z'):
+    if ('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z') or symbol == '⊤' or symbol == '⊥':
         return True
     return False
 
@@ -109,8 +109,8 @@ f = open("parseR_Out.txt",'w')
 for exp in exps:
     error = "No errors"
 
-    f.write("".join([exp[0],exp[1],exp[2],'\n']))
-    exp = exp[4:-2]
+    f.write(exp + '\n')
+    exp = exp[:-1]
     Q = []
     S = []
 

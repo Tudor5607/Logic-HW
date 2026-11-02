@@ -1,3 +1,4 @@
-⇔∨⇒PQST
-⇔⇒P¬¬¬¬¬T∧QS
-Interpretation: P:True Q:False S:True T:False
+∧⇒PQ∧¬QP
+⇒⇒PQ⇒QP
+∧¬∨PQ¬Q
+Interpretation: P:True Q:False

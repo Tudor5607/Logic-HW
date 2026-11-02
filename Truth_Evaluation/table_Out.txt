@@ -1,0 +1,48 @@
+\noindent
+$F \lor G \sim G \lor F$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$F$ & $G$ & $F \lor G$ & $G \lor F$ & $F \lor G \Leftrightarrow G \lor F$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$F \land G \sim G \land F$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$F$ & $G$ & $F \land G$ & $G \land F$ & $F \land G \Leftrightarrow G \land F$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$F \Leftrightarrow G \sim G \Leftrightarrow F$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$F$ & $G$ & $F \Leftrightarrow G$ & $G \Leftrightarrow F$ & $(F \Leftrightarrow G) \Leftrightarrow (G \Leftrightarrow F)$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+

@@ -1,4 +1,4 @@
-(a) P ∧ Q ⇒ R¬B ∨ G,
-(b) P ⇒ ¬¬¬¬¬B ⇔ Q ∧ S,
-(c) P ∨ (Q ∧ ¬R) ⇒ S ∨ T,
-(d) (P, Q) ⇒ R.
+P ∧ Q ⇒ R¬B ∨ G
+P ⇒ ¬¬¬¬¬B ⇔ Q ∧ S
+P ∨ (Q ∧ ¬R) ⇒ S ∨ T
+(P, Q) ⇒ R

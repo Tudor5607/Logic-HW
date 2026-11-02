@@ -1,6 +1,7 @@
 Note: This solution was written with the help of an algorithm. Because of that I have used a "folder" notation for the tree in order to make it easier to print.
 
-(a)
+(((P ⇒ Q) ∨ S) ⇔ T)
+
 Step 1, Symbol '(':
 "□"
     "F"<--
@@ -116,7 +117,8 @@ Valid
 
 ⇔∨⇒PQST
 
-(b)
+((P ⇒ (Q ∧ (S ⇒ T))))
+
 Step 1, Symbol '(':
 "□"
     "F"<--
@@ -260,7 +262,8 @@ Step 15, Symbol ')':
 
 Invalid:Final tree contains open nodes
 
-(c)
+(¬(B(¬Q)) ∧ R)
+
 Step 1, Symbol '(':
 "□"<--
     "F"
@@ -290,7 +293,8 @@ Step 5, Symbol '(':
 
 Invalid:The next step would print the '¬' connective here, but the structure of the subtree wouldn't be correct in that case.
 
-(d)
+(P ∧ ((¬Q) ∧ (¬(¬(Q ⇔ (¬R))))))
+
 Step 1, Symbol '(':
 "□"
     "F"<--
@@ -548,7 +552,8 @@ Valid
 
 ∧P∧¬Q¬¬⇔Q¬R
 
-(e)
+((P ∨ Q) ⇒ ¬(P ∨ Q)) ∧ (P ∨ (¬(¬Q)))
+
 Step 1, Symbol '(':
 "□"
     "F"<--
@@ -605,7 +610,8 @@ Step 8, Symbol '¬':
 
 Invalid:Expected an atomic proposition here.
 
-(f)
+(((A ∨ B) ∧ (¬C)) ⇒ ((D ⇔ E)))
+
 Step 1, Symbol '(':
 "□"
     "F"<--
@@ -844,7 +850,8 @@ Step 22, Symbol ')':
 
 Invalid:Final tree contains open nodes
 
-(g)
+((((A ∨ B) ∧ (¬C ∨ D)) ⇒ (((E ∧ F) ∨ (¬G ∧ H)) ⇔ (((I ∨ (¬J)) ∧ (K ⇒ L))))))
+
 Step 1, Symbol '(':
 "□"
     "F"<--
@@ -982,7 +989,7 @@ Step 13, Symbol '∨':
 
 Invalid:Current node is not open.
 
-(h)
+((((A ∨ B) ∧ (¬(C ∨ D))) ⇒ (((E ∧ F) ∨ (¬G ∧ H)) ⇔ (((I ∨ (¬J)) ∧ (K ⇒ L))))))
 Step 1, Symbol '(':
 "□"
     "F"<--

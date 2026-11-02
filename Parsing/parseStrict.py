@@ -63,7 +63,7 @@ class Tree:
 
 #Checks if the symbol is a letter, which means we have reached an atomic propositon.
 def isAtomic(symbol):
-    if ('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z'):
+    if ('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z') or symbol == '⊤' or symbol == '⊥':
         return True
     return False
 
@@ -131,14 +131,12 @@ f = open("parseS_Out.txt",'w')
 f.write("Note: This solution was written with the help of an algorithm. Because of that I have used a \"folder\" notation for the tree in order to make it easier to print.\n\n")
 for i in range(len(Prop)):
     output = "Valid"
-    
-    #Each exercise will be written in a different text file, because some solutions may take up a lot of space.
 
-    #Prints the letter denoting our current exercise.
-    f.write("".join([Prop[i][0],Prop[i][1],Prop[i][2],'\n']))
+    #We write the proposition we are trying to parse
+    f.write(Prop[i] + '\n')
 
-    #Removes unnecasary characters.
-    Prop[i] = Prop[i][4:-2]
+    #We remove the newline character at the end
+    Prop[i] = Prop[i][:-1]
 
     Trees.append(Tree("\"F\""))
     Pos = Trees[i]
@@ -157,7 +155,7 @@ for i in range(len(Prop)):
             #Separate step for '(' as we need to know if the next symbol is '¬' or another logical connective.
             if symbol == '(':
                 Pos.name = "\"□\""
-                if i == len(Prop[i]) - 1:
+                if j == len(Prop[i]) - 1:
                     output = "Invalid:The character \'(\' can never be found at the end of a valid propositional formula."
 
                 #Create an open subtree node but don't switch to it as the next step will write '¬' in the current node.
