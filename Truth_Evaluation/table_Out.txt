@@ -1,48 +1,40 @@
 \noindent
-$F \lor G \sim G \lor F$ \\
+$Q \lor R, Q \Rightarrow \lnot P, \lnot (R \land P) \vDash \lnot P$ \\
 \noindent
-\begin{tabular}{ |c|c|c|c|c| } 
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c| } 
 \hline
-$F$ & $G$ & $F \lor G$ & $G \lor F$ & $F \lor G \Leftrightarrow G \lor F$ \\
+$Q$ & $R$ & $P$ & $\lnot P$ & $R \land P$ & $Q \Rightarrow \lnot P$ & $\lnot (R \land P)$ & $Q \lor R$ & $(Q \Rightarrow \lnot P) \land \lnot (R \land P)$ & $(Q \lor R) \land ((Q \Rightarrow \lnot P) \land \lnot (R \land P))$ & $(Q \lor R) \land ((Q \Rightarrow \lnot P) \land \lnot (R \land P)) \Rightarrow \lnot P$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline\end{tabular}\\ \\
 
 \noindent
-$F \land G \sim G \land F$ \\
+$P \Rightarrow Q, Q \vDash P \land Q$ \\
 \noindent
-\begin{tabular}{ |c|c|c|c|c| } 
+\begin{tabular}{ |c|c|c|c|c|c| } 
 \hline
-$F$ & $G$ & $F \land G$ & $G \land F$ & $F \land G \Leftrightarrow G \land F$ \\
+$P$ & $Q$ & $P \Rightarrow Q$ & $(P \Rightarrow Q) \land Q$ & $P \land Q$ & $(P \Rightarrow Q) \land Q \Rightarrow P \land Q$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline\end{tabular}\\ \\
-
-\noindent
-$F \Leftrightarrow G \sim G \Leftrightarrow F$ \\
-\noindent
-\begin{tabular}{ |c|c|c|c|c| } 
-\hline
-$F$ & $G$ & $F \Leftrightarrow G$ & $G \Leftrightarrow F$ & $(F \Leftrightarrow G) \Leftrightarrow (G \Leftrightarrow F)$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline\end{tabular}\\ \\
 

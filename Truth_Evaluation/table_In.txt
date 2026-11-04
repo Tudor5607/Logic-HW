@@ -1,3 +1,2 @@
-F ∨ G ∼ G ∨ F
-F ∧ G ∼ G ∧ F
-F ⇔ G ∼ G ⇔ F
+Q ∨ R, Q ⇒ ¬P, ¬(R ∧ P) ⊨ ¬P
+P ⇒ Q, Q ⊨ P ∧ Q

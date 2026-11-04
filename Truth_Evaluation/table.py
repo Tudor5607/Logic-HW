@@ -265,6 +265,7 @@ for exp in exps:
                 jnd = d[tab[0][j]][1]
                 tab[i].append( ( (not tab[i][ind]) or tab[i][jnd] ) and ( (not tab[i][jnd]) or tab[i][ind] ))
 
+    #Changing into latex comptatible syntax
     exp = sav
     exp = exp.replace('¬',r"\lnot ")
     exp = exp.replace('∧',r"\land")
@@ -272,17 +273,26 @@ for exp in exps:
     exp = exp.replace('⇒',r"\Rightarrow")
     exp = exp.replace('⇔',r"\Leftrightarrow")
     exp = exp.replace('∼',r"\sim")
-    exp = exp.replace('⇔',r"\vDash")
+    exp = exp.replace('⊨',r"\vDash")
+    exp = exp.replace('⊤', r"\top")
+    exp = exp.replace('⊥', r"\bot")
+
     f.write(r"\noindent" + '\n')
     f.write('$' + exp + '$' + r" \\" + '\n')
 
-    #f.write(r"\footnotesize" + '\n')
+    #Optional in case tables get too big.
+    #f.write(r"\normalsize" + '\n')
     f.write(r"\noindent" + '\n')
     f.write(r"\begin{tabular}{ " + r"|c"*len(tab[0]) + r"| } " + '\n')
+
+    for i in range(len(tab[0])):
+        tab[0][i] = tab[0][i].replace('⊤', r"\top")
+        tab[0][i] = tab[0][i].replace('⊥', r"\bot")
 
     for i in range(len(tab)):
         l = len(tab[i]) - 1
         for j in range(len(tab[i])):
+
             if tab[i][j] == True:
                 if j == l:
                     tab[i][j] = r"$\textcolor{red}{\mathbb{T}}$"
