@@ -1,1 +1,0 @@
-(\lnot A \land \lnot B \land \lnot C) \lor (\lnot A \land B \land \lnot C) \lor (A \land \lnot B \land \lnot C) \lor (A \land B \land \lnot C) \sim ( \lnot A \land \lnot B \land \lnot C) \lor ( \lnot A \land B \land \lnot C) \lor ( A \land \lnot B \land \lnot C) \lor ( A \land B \land \lnot C) \sim ( \lnot A \land \lnot C) \lor ( A \land \lnot C) \sim ( \lnot C)

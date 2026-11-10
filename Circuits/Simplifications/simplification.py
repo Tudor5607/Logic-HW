@@ -113,7 +113,7 @@ def write_steps(ok):
 
 
 with open("simplification_In.txt",'r',encoding="UTF-8") as f:
-    exp = f.readline()
+    exp = f.readline().strip("\n ")
 
 f = open("simplification_Out.txt",'w',encoding="UTF-8")
 f.write(lateXfy(exp))
@@ -156,11 +156,11 @@ for term in terms:
     x = [""]
     for nr in term:
         if nr == '-':
+            t = []
             for i in range(len(x)):
-                t = []
                 t.append(x[i] + '0')
                 t.append(x[i] + '1')
-                x = t
+            x = t
         else:
             for i in range(len(x)):
                 x[i] += nr
@@ -229,22 +229,25 @@ vars = [symb for symb in vars.keys()]
 
 steps.reverse()
 steps = [[x.name for x in y] for y in steps]
+
 for s in steps:
-    st = r" \sim "
-    for i in range(len(s)):
-        st += "( "
-        for j in range(len(s[0])):
+    st = []
+    for t in s:
+        lits = []
+        for i in range(len(t)):
+            if t[i] == '1':
+                lits.append(vars[i])
+            elif t[i] == '0':
+                lits.append(r"\lnot " + vars[i])
+        if lits == []:
+            lits = r"\top"
+        elif len(lits) == 1:
+            lits = lits[0]
+        else:
+            lits =  "(" + r" \land ".join(lits) + ")"
 
-            if s[i][j] == '1':
-                st += vars[j] + r" \land "
-            elif s[i][j] == '0':
-                st += r"\lnot " + vars[j] + r" \land "
+        st.append(lits)
 
-        st = st[:-7]
-        st += r") \lor "
-    st = st[:-6]
-
-    f.write(st)
-
+    f.write(r" \sim " + r" \lor ".join(st))
 
 f.close()

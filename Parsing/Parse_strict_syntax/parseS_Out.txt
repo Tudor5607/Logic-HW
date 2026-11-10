@@ -990,6 +990,7 @@ Step 13, Symbol '∨':
 Invalid:Current node is not open.
 
 ((((A ∨ B) ∧ (¬(C ∨ D))) ⇒ (((E ∧ F) ∨ (¬G ∧ H)) ⇔ (((I ∨ (¬J)) ∧ (K ⇒ L))))))
+
 Step 1, Symbol '(':
 "□"
     "F"<--

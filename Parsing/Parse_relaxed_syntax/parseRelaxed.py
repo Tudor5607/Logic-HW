@@ -108,9 +108,8 @@ with open("parseR_In.txt",'r', encoding="utf-8") as f:
 f = open("parseR_Out.txt",'w', encoding="utf-8")
 for exp in exps:
     error = "No errors"
-
-    f.write(exp + '\n')
-    exp = exp[:-1]
+    exp = exp.strip("\n ")
+    f.write(exp + "\n\n")
     Q = []
     S = []
 

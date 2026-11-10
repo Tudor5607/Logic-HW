@@ -1,0 +1,15 @@
+How to install:
+
+How to use:
+-Input:
+The input file will contain the number of inputs of the function n on the first line.
+The second line will contain n letters denoting the propositional variables that will be used to write the propositional formula describing the funcion. (the construction used will be the one provided in the lecture)
+The next 2^n lines will contain n+1 letters (either T or F), representing a distinct interpretation of the propositional variables on the second row, followed by the value we would like the function to have for that input.
+
+-Running the program:
+The program can be run from inside an IDE like Visual Studio Code or directly from the terminal.
+
+-Output:
+The output file will contain two rows. 
+The first row will contain the desired formula in a lateX compatible form (this formula is intended to be pasted in a .tex document).
+The second row will contain the formula written using special characters that denote the logical connectives (this formula is intended to be pasted in other progams that take such an expression as input, for example the formula simplification program).
