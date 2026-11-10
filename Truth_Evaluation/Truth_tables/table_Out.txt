@@ -1,272 +1,80 @@
 \noindent
-$W \land A \Rightarrow P, \lnot A \Rightarrow I, \lnot W \Rightarrow M, \lnot P, E \Rightarrow \lnot (I \lor M ) \vDash E$ \\
+$W \land A \Rightarrow P \vDash E$ \\
 \noindent
-\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| } 
+\begin{tabular}{ |c|c|c|c|c|c|c| } 
 \hline
-$W$ & $A$ & $P$ & $I$ & $M$ & $E$ & $I \lor M$ & $\lnot (I \lor M)$ & $\lnot W$ & $\lnot P$ & $E \Rightarrow \lnot (I \lor M)$ & $\lnot A$ & $\lnot W \Rightarrow M$ & $\lnot P \land (E \Rightarrow \lnot (I \lor M))$ & $W \land A$ & $\lnot A \Rightarrow I$ & $(\lnot W \Rightarrow M) \land (\lnot P \land (E \Rightarrow \lnot (I \lor M)))$ & $W \land A \Rightarrow P$ & $(\lnot A \Rightarrow I) \land ((\lnot W \Rightarrow M) \land (\lnot P \land (E \Rightarrow \lnot (I \lor M))))$ & $(W \land A \Rightarrow P) \land ((\lnot A \Rightarrow I) \land ((\lnot W \Rightarrow M) \land (\lnot P \land (E \Rightarrow \lnot (I \lor M)))))$ & $(W \land A \Rightarrow P) \land ((\lnot A \Rightarrow I) \land ((\lnot W \Rightarrow M) \land (\lnot P \land (E \Rightarrow \lnot (I \lor M))))) \Rightarrow E$ \\
+$W$ & $A$ & $P$ & $E$ & $W \land A$ & $W \land A \Rightarrow P$ & $(W \land A \Rightarrow P) \Rightarrow E$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline\end{tabular}\\ \\
 
 \noindent
-$W \land A \Rightarrow P, \lnot A \Rightarrow I, \lnot W \Rightarrow M, \lnot P, E \Rightarrow \lnot (I \lor M ) \vDash \lnot E$ \\
+$W \land A \Rightarrow P \vDash \lnot E$ \\
 \noindent
-\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| } 
+\begin{tabular}{ |c|c|c|c|c|c|c|c| } 
 \hline
-$W$ & $A$ & $P$ & $I$ & $M$ & $E$ & $I \lor M$ & $\lnot (I \lor M)$ & $\lnot W$ & $\lnot P$ & $E \Rightarrow \lnot (I \lor M)$ & $\lnot A$ & $\lnot W \Rightarrow M$ & $\lnot P \land (E \Rightarrow \lnot (I \lor M))$ & $W \land A$ & $\lnot A \Rightarrow I$ & $(\lnot W \Rightarrow M) \land (\lnot P \land (E \Rightarrow \lnot (I \lor M)))$ & $W \land A \Rightarrow P$ & $(\lnot A \Rightarrow I) \land ((\lnot W \Rightarrow M) \land (\lnot P \land (E \Rightarrow \lnot (I \lor M))))$ & $(W \land A \Rightarrow P) \land ((\lnot A \Rightarrow I) \land ((\lnot W \Rightarrow M) \land (\lnot P \land (E \Rightarrow \lnot (I \lor M)))))$ & $\lnot E$ & $(W \land A \Rightarrow P) \land ((\lnot A \Rightarrow I) \land ((\lnot W \Rightarrow M) \land (\lnot P \land (E \Rightarrow \lnot (I \lor M))))) \Rightarrow \lnot E$ \\
+$W$ & $A$ & $P$ & $E$ & $W \land A$ & $W \land A \Rightarrow P$ & $\lnot E$ & $(W \land A \Rightarrow P) \Rightarrow \lnot E$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
 \hline\end{tabular}\\ \\
 

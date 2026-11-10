@@ -125,10 +125,10 @@ def step(Pos,symbol):
 #The parsing algorithm
 Trees = []
 Pos = 0
-with open("parseS_In.txt",'r') as f:
+with open("parseS_In.txt",'r', encoding="UTF-8") as f:
     Prop = f.readlines()
 
-f = open("parseS_Out.txt",'w')
+f = open("parseS_Out.txt",'w', encoding="UTF-8")
 f.write("Note: This solution was written with the help of an algorithm. Because of that I have used a \"folder\" notation for the tree in order to make it easier to print.\n\n")
 for i in range(len(Prop)):
     output = "Valid"

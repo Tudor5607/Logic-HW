@@ -1,0 +1,12 @@
+How to install:
+Take the url of the folder containing this text file, and paste it into the website download-directory.github.io
+
+How to use:
+-Input:
+The input file will contain multiple expressions on multiple rows. These expressions can be anything and they can use any characters. 
+
+-Running the program:
+The program can be run from inside an IDE like Visual Studio Code or directly from the terminal (note that the .py file must be run from inside the folder it is contained in, as the file input/output will not work otherwise).
+
+-Output:
+The output file will contain each step of a modified version of Dijkstra's shunting yard algorithm that determines whether the expression is a valid propositional formula when using the relaxed syntax.

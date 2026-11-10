@@ -1,0 +1,19 @@
+How to install:
+Take the url of the folder containing this text file, and paste it into the website download-directory.github.io
+
+How to use:
+-Input:
+The input file will on its first line the expression to be simplified. This expression must have a certain format though:
+1.The expression must be written as a disjunction of conjunctions. 
+2.The disjunction and conjunction symbols must have spaces to their left and their right. 
+3.Inside a conjunction we may have multiple letters, but each letter or its negation may only appear once. 
+4.The negation symbol will have no spaces to its left or its right. 
+5.Each conjunction must be wrapped in parantheses. 
+6.Finally, the symbols ¬ ∧ ∨ must be used.
+(An easy way to obtain this exact format is to write the expression in overleaf and copy the output from the pdf document or use the second line of the output of the program in this repo that converts a function into a propositional formula)
+
+-Running the program:
+The program can be run from inside an IDE like Visual Studio Code or directly from the terminal (note that the .py file must be run from inside the folder it is contained in, as the file input/output will not work otherwise).
+
+-Output:
+The output file will contain the desired formula in a lateX compatible form (this formula is intended to be pasted in a .tex document), along with all the steps taken in order to reach it.

@@ -150,10 +150,10 @@ def fill(Node):
         Node.dom = Symbol(' ')
     
 
-with open("table_In.txt",'r') as f:
+with open("table_In.txt",'r', encoding="UTF-8") as f:
     exps = f.readlines()
 
-f = open("table_Out.txt",'w')
+f = open("table_Out.txt",'w', encoding="UTF-8")
 #Don't mind this
 #f.write(r"\documentclass{article}" + '\n')
 #f.write(r"\usepackage{amssymb}   % \mathbb, \vDash" + '\n')

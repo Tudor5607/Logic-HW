@@ -1,0 +1,12 @@
+How to install:
+Take the url of the folder containing this text file, and paste it into the website download-directory.github.io
+
+How to use:
+-Input:
+The input file will contain on logical propositions on multiple rows (written in polish notation, propositions in polish notation can easily be obtained from the relaxed syntax parsing algorithm from this repo or can be transformed from standard propositions by hand). After the proposition, the input file must contain one final row of the form "Interpretation: P:True Q:False", where we all propositional variables in the propositions above must be mentions along with a truth value for each.
+
+-Running the program:
+The program can be run from inside an IDE like Visual Studio Code or directly from the terminal (note that the .py file must be run from inside the folder it is contained in, as the file input/output will not work otherwise).
+
+-Output:
+The output file will contain a step by step evaluation of each proposition, realised in a visual way by uisng the abstract syntax.

@@ -124,13 +124,13 @@ def fill(Node,Q):
     if Pos != 0:
         Pos.ispos = 1
 
-with open("truthValue_In.txt",'r') as f:
+with open("truthValue_In.txt",'r', encoding="UTF-8") as f:
     Prop = f.readlines()
 
 I = Prop[-1].split()
 Prop = Prop[:-1]
 Prop = [w.strip("\n ") for w in Prop]
-f = open("truthValue_Out.txt",'w')
+f = open("truthValue_Out.txt",'w', encoding="UTF-8")
 d = {}
 for pair in I:
     if pair[2] == 'T':

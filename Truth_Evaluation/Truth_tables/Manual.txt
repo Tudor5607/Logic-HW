@@ -1,0 +1,12 @@
+How to install:
+Take the url of the folder containing this text file, and paste it into the website download-directory.github.io
+
+How to use:
+-Input:
+The input file will contain certain "expressions" or logical propositions on multiple rows. Each "expression" will either denote a logical consequence or a logical equivalence. In case either of these expressions are present, the deduction theorem and characterization of logical equivalence will be used in order to convert the expressions into logical propositions whose properties we can check with truth tables. 
+
+-Running the program:
+The program can be run from inside an IDE like Visual Studio Code or directly from the terminal (note that the .py file must be run from inside the folder it is contained in, as the file input/output will not work otherwise).
+
+-Output:
+The output file will contain a truth table for each expression we have inputed. The table will be represented in a lateX compatible form (the output is meant to be pasted in a .tex document).

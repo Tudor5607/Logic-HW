@@ -2,7 +2,7 @@ formula = ""
 formula_tex = ""
 
 
-with open("truthFunction_In.txt",'r') as f:
+with open("truthFunction_In.txt",'r', encoding="UTF-8") as f:
 
     n = int(f.readline())
     vars = f.readline()
@@ -29,6 +29,6 @@ with open("truthFunction_In.txt",'r') as f:
 formula = formula[:-3]
 formula_tex = formula_tex[:-6]
 
-with open("truthFunction_Out.txt",'w') as f:
+with open("truthFunction_Out.txt",'w', encoding="UTF-8") as f:
     f.write(formula_tex + '\n')
     f.write(formula)
