@@ -154,6 +154,12 @@ with open("table_In.txt",'r') as f:
     exps = f.readlines()
 
 f = open("table_Out.txt",'w')
+#Don't mind this
+#f.write(r"\documentclass{article}" + '\n')
+#f.write(r"\usepackage{amssymb}   % \mathbb, \vDash" + '\n')
+#f.write(r"\usepackage{xcolor}    % \textcolor{red}" + '\n')
+#f.write(r"\begin{document}" + "\n\n")
+
 for exp in exps:
 
     exp = exp[:-1]
@@ -315,6 +321,9 @@ for exp in exps:
     f.write(r"\hline")
     f.write(r"\end{tabular}\\ \\" + "\n\n")
     #f.write(r"\large" + '\n')
+
+
+#f.write("\n\n" + r"\end{document}")
 
 
 f.close()

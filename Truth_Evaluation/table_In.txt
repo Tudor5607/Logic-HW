@@ -1,2 +1,2 @@
-Q ∨ R, Q ⇒ ¬P, ¬(R ∧ P) ⊨ ¬P
-P ⇒ Q, Q ⊨ P ∧ Q
+W ∧ A ⇒ P, ¬A ⇒ I, ¬W ⇒ M, ¬P, E ⇒ ¬(I ∨ M ) ⊨ E
+W ∧ A ⇒ P, ¬A ⇒ I, ¬W ⇒ M, ¬P, E ⇒ ¬(I ∨ M ) ⊨ ¬E

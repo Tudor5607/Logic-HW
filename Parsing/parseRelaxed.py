@@ -57,7 +57,7 @@ class Symbol:
 
 #Checks if the symbol is an atomic proposition.
 def isAtomic(symbol):
-    if ('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z') or symbol == '⊤' or symbol == '⊥':
+    if ( (('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z')) and len(symbol) == 1) or symbol == '⊤' or symbol == '⊥':
         return True
     return False
 
@@ -102,10 +102,10 @@ def fill(Node):
     if Pos != 0:
         Pos.ispos = 1
 
-with open("parseR_In.txt",'r') as f:
+with open("parseR_In.txt",'r', encoding="utf-8") as f:
     exps = f.readlines()
 
-f = open("parseR_Out.txt",'w')
+f = open("parseR_Out.txt",'w', encoding="utf-8")
 for exp in exps:
     error = "No errors"
 

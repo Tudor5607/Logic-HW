@@ -1,0 +1,2 @@
+( \lnot A \land \lnot B \land \lnot C ) \lor ( \lnot A \land B \land \lnot C ) \lor ( A \land \lnot B \land \lnot C ) \lor ( A \land B \land \lnot C )
+(¬A ∧ ¬B ∧ ¬C) ∨ (¬A ∧ B ∧ ¬C) ∨ (A ∧ ¬B ∧ ¬C) ∨ (A ∧ B ∧ ¬C)

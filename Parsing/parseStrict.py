@@ -1,3 +1,4 @@
+atomic_propositions = []
 #A class that we will use in the parsing algorithm.
 class Tree:
     #Constructor.
@@ -63,7 +64,7 @@ class Tree:
 
 #Checks if the symbol is a letter, which means we have reached an atomic propositon.
 def isAtomic(symbol):
-    if ('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z') or symbol == '⊤' or symbol == '⊥':
+    if ( (('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z')) and len(symbol) == 1) or symbol == '⊤' or symbol == '⊥':
         return True
     return False
 
