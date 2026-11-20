@@ -1,0 +1,42 @@
+(1) $\{\lnot W, P, \lnot A \}$ \\
+(2) $\{I, A \}$ \\
+(3) $\{M, W \}$ \\
+(4) $\{\lnot P \}$ \\
+(5) $\{\lnot I, \lnot E \}$ \\
+(6) $\{\lnot M, \lnot E \}$ \\
+(7) $\{E \}$ \\
+(8) $\{M, P, \lnot A \}$ from (1) and (3)\\
+(9) $\{\lnot W, \lnot A \}$ from (1) and (4)\\
+(10) $\{\lnot W, I, P \}$ from (1) and (2)\\
+(11) $\{\lnot E, A \}$ from (2) and (5)\\
+(12) $\{\lnot E, W \}$ from (3) and (6)\\
+(13) $\{\lnot I \}$ from (5) and (7)\\
+(14) $\{\lnot M \}$ from (6) and (7)\\
+(15) $\{P, \lnot A, \lnot E \}$ from (8) and (6)\\
+(16) $\{P, \lnot A \}$ from (8) and (14)\\
+(17) $\{M, \lnot A \}$ from (8) and (4)\\
+(18) $\{I, P, M \}$ from (8) and (2)\\
+(19) $\{M, P, \lnot E \}$ from (8) and (11)\\
+(20) $\{\lnot E, \lnot A \}$ from (9) and (12)\\
+(21) $\{\lnot W, I \}$ from (9) and (2)\\
+(22) $\{\lnot W, \lnot E \}$ from (9) and (11)\\
+(23) $\{I, P, \lnot E \}$ from (10) and (12)\\
+(24) $\{\lnot W, P, \lnot E \}$ from (10) and (5)\\
+(25) $\{\lnot W, P \}$ from (10) and (13)\\
+(26) $\{A \}$ from (11) and (7)\\
+(27) $\{P, \lnot E \}$ from (11) and (15)\\
+(28) $\{M, \lnot E \}$ from (11) and (17)\\
+(29) $\{\lnot E \}$ from (11) and (20)\\
+(30) $\{W \}$ from (12) and (7)\\
+(31) $\{I, \lnot E \}$ from (12) and (21)\\
+(32) $\{M, P \}$ from (13) and (18)\\
+(33) $\{\lnot W \}$ from (13) and (21)\\
+(34) $\{\lnot A \}$ from (14) and (17)\\
+(35) $\{I, P \}$ from (14) and (18)\\
+(36) $\{P \}$ from (14) and (32)\\
+(37) $\{M, I \}$ from (17) and (2)\\
+(38) $\{M \}$ from (17) and (26)\\
+(39) $\{I \}$ from (21) and (30)\\
+(40) $\{ \}$ from (26) and (34)\\
+
+Unsatisfiable

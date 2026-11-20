@@ -1,0 +1,2 @@
+NNF:\\
+$(W \land A \Rightarrow P) \land (\lnot A \Rightarrow I) \land (\lnot W \Rightarrow M) \land \lnot P \land (E \Rightarrow \lnot (I \lor M)) \land \lnot E \sim (\lnot (W \land A) \lor P) \land (\lnot \lnot A \lor I) \land (\lnot \lnot W \lor M) \land \lnot P \land (\lnot E \lor \lnot (I \lor M)) \land \lnot E \sim ((\lnot W \lor \lnot A) \lor P) \land (A \lor I) \land (W \lor M) \land \lnot P \land (\lnot E \lor (\lnot I \land \lnot M)) \land \lnot E$\\ \\

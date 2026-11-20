@@ -1,0 +1,6 @@
+DNF:\\
+$(P_{1} \land \lnot P_{3}) \lor P_{2} \lor P_{3} \lor \lnot P_{1} \sim (P_{1} \land \lnot P_{3}) \lor P_{2} \lor P_{3} \lor \lnot P_{1}$\\ \\
+
+CNF:\\
+$ \lnot((P_{1} \land \lnot P_{3}) \lor P_{2} \lor P_{3} \lor \lnot P_{1}) \sim (\lnot P_{1} \lor P_{3}) \land \lnot P_{2} \land \lnot P_{3} \land P_{1} \sim (\lnot P_{1} \land \lnot P_{2} \land \lnot P_{3} \land P_{1}) \lor (P_{3} \land \lnot P_{2} \land \lnot P_{3} \land P_{1}) \sim (\lnot P_{1} \land \lnot P_{2} \land \lnot P_{3} \land P_{1}) \lor (P_{3} \land \lnot P_{2} \land \lnot P_{3} \land P_{1})$\\ So: \\$(P_{1} \land \lnot P_{3}) \lor P_{2} \lor P_{3} \lor \lnot P_{1} \sim (P_{1} \lor P_{2} \lor P_{3} \lor \lnot P_{1}) \land (\lnot P_{3} \lor P_{2} \lor P_{3} \lor \lnot P_{1})$\\
+

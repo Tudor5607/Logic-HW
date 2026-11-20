@@ -1,4 +1,1 @@
-P ∧ Q ⇒ R¬B ∨ G
-P ⇒ ¬¬¬¬¬B ⇔ Q ∧ S
-P ∨ (Q ∧ ¬R) ⇒ S ∨ T
-(P, Q) ⇒ R
+(W ∧ A ⇒ P ) ∧ (¬A ⇒ I) ∧ (¬W ⇒ M ) ∧ ¬P ∧ (E ⇒ ¬(I ∨ M )) ∧ ¬E

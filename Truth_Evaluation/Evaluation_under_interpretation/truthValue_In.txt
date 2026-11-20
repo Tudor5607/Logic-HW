@@ -1,4 +1,2 @@
-∧⇒PQ∧¬QP
-⇒⇒PQ⇒QP
-∧¬∨PQ¬Q
-Interpretation: P:True Q:False
+⇒∧(⇒P1∨(P2P3)⇒¬P1∨(P3P4)⇒P3¬P6⇒¬P3⇒P4P1¬∧(P2P5)⇒P2P5)¬⇒P3P6
+Interpretation: P:True Q:False R:True
