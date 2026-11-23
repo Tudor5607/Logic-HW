@@ -1,2 +1,21 @@
-⇒∧(⇒P1∨(P2P3)⇒¬P1∨(P3P4)⇒P3¬P6⇒¬P3⇒P4P1¬∧(P2P5)⇒P2P5)¬⇒P3P6
-Interpretation: P:True Q:False R:True
+p
+⊥
+¬p
+¬¬q
+∧(pq)
+∨(pq)
+⇒pq
+⇒qp
+⇔pq
+⇔p1p1
+∧(pq¬r)
+∨(qr¬p)
+∧(p∨(qr)¬q)
+⇒∧(p¬q)∨(r12q)
+⇔¬p1⇒qr12
+⇒⇒pqr
+⇒p⇒qr
+¬∧(p∨(q⊥)⇔r12¬q)
+∨(∧(p¬p)∧(q¬q)⊤)
+⇔⇔pq⇔qp
+I: p:T q:F r:T p1:F r12:F

@@ -1,5 +1,5 @@
 atomic_propositions = [f(x) for x in range(65,91) for f in (lambda y : chr(y), lambda y : chr(y + 32))]
-atomic_propositions.extend(['⊤','⊥'])
+s_ato_prop =['⊤','⊥']
 
 connectives = ['¬','∧','∨','⇒','⇔']
 priority = {'⇔':1,'⇒':2,'∨':3,'∧':3,'¬':4}
@@ -99,7 +99,7 @@ for exp in exps:
     expect = 0
     f.write("Expect:{}\nQueue:{}\nStack:{}\n\n".format(d[expect],Q,S))
 
-    if exp[-1] != ')' and exp[-1] not in atomic_propositions and exp[-1] not in digits:
+    if exp[-1] != ')' and exp[-1] not in atomic_propositions and exp[-1] not in digits and exp[-1] not in s_ato_prop:
         state = "Not well-formed: A well-formed propositional formula in relaxed syntax may only end with a closed paranthesis or a propositional variable."
 
     l = len(exp)
@@ -118,6 +118,13 @@ for exp in exps:
                     symb += exp[i]
                     i += 1
                 i -= 1
+                if expect == 0:
+                    Q.append(symb)
+                    expect = 1
+                else:
+                    state = "Not well-formed: Expected a different symbol here."
+
+            elif symb in s_ato_prop:
                 if expect == 0:
                     Q.append(symb)
                     expect = 1

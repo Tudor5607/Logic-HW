@@ -1,80 +1,522 @@
 \noindent
-$W \land A \Rightarrow P \vDash E$ \\
+$p$ \\
+\noindent
+\begin{tabular}{ |c| } 
+\hline
+$p$ \\
+\hline
+$\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$\lnot p \lor p$ \\
+\noindent
+\begin{tabular}{ |c|c|c| } 
+\hline
+$p$ & $\lnot p$ & $\lnot p \lor p$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \land \lnot p$ \\
+\noindent
+\begin{tabular}{ |c|c|c| } 
+\hline
+$p$ & $\lnot p$ & $p \land \lnot p$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \Rightarrow q$ \\
+\noindent
+\begin{tabular}{ |c|c|c| } 
+\hline
+$p$ & $q$ & $p \Rightarrow q$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$(p \land q) \lor r$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $r$ & $(p \land q)$ & $(p \land q) \lor r$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \Rightarrow q \Rightarrow r$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $r$ & $q \Rightarrow r$ & $p \Rightarrow q \Rightarrow r$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$(p \Rightarrow q) \Rightarrow r$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $r$ & $(p \Rightarrow q)$ & $(p \Rightarrow q) \Rightarrow r$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$\lnot \lnot p \Leftrightarrow p$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+$p$ & $\lnot p$ & $\lnot \lnot p$ & $\lnot \lnot p \Leftrightarrow p$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$\lnot (p \land q) \Leftrightarrow \lnot p \lor \lnot q$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $(p \land q)$ & $\lnot p$ & $\lnot q$ & $\lnot (p \land q)$ & $\lnot p \lor \lnot q$ & $\lnot (p \land q) \Leftrightarrow \lnot p \lor \lnot q$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$(p \Rightarrow q) \land (q \Rightarrow r) \Rightarrow (p \Rightarrow r)$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $r$ & $(p \Rightarrow q)$ & $(q \Rightarrow r)$ & $(p \Rightarrow q) \land (q \Rightarrow r)$ & $p \Rightarrow r$ & $(p \Rightarrow q) \land (q \Rightarrow r) \Rightarrow p \Rightarrow r$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$(p \lor q) \land (\lnot p \lor r) \Rightarrow q \lor r$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $r$ & $\lnot p$ & $(p \lor q)$ & $(\lnot p \lor r)$ & $(p \lor q) \land (\lnot p \lor r)$ & $q \lor r$ & $(p \lor q) \land (\lnot p \lor r) \Rightarrow q \lor r$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \lor \bot \Leftrightarrow p$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+$p$ & $\bot$ & $p \lor \bot$ & $p \lor \bot \Leftrightarrow p$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$\top \land \lnot \bot$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+$\top$ & $\bot$ & $\lnot \bot$ & $\top \land \lnot \bot$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$(p \Rightarrow q) \land (r \Rightarrow s) \land (p \lor r) \Rightarrow q \lor s$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $r$ & $s$ & $(p \Rightarrow q)$ & $(r \Rightarrow s)$ & $(p \lor r)$ & $(p \Rightarrow q) \land (r \Rightarrow s) \land (p \lor r)$ & $q \lor s$ & $(p \Rightarrow q) \land (r \Rightarrow s) \land (p \lor r) \Rightarrow q \lor s$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p_{1} \land p_{2} \Rightarrow p_{10}$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$p_{1}$ & $p_{2}$ & $p_{10}$ & $p_{1} \land p_{2}$ & $p_{1} \land p_{2} \Rightarrow p_{10}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \Rightarrow q \sim \lnot p \lor q$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $\lnot p$ & $p \Rightarrow q$ & $\lnot p \lor q$ & $p \Rightarrow q \Leftrightarrow \lnot p \lor q$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \Rightarrow q \sim q \Rightarrow p$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $p \Rightarrow q$ & $q \Rightarrow p$ & $p \Rightarrow q \Leftrightarrow q \Rightarrow p$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \land (q \lor r) \sim (p \land q) \lor (p \land r)$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $r$ & $(q \lor r)$ & $(p \land q)$ & $(p \land r)$ & $p \land (q \lor r)$ & $(p \land q) \lor (p \land r)$ & $p \land (q \lor r) \Leftrightarrow (p \land q) \lor (p \land r)$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \Leftrightarrow q \sim (p \Rightarrow q) \land (q \Rightarrow p)$ \\
 \noindent
 \begin{tabular}{ |c|c|c|c|c|c|c| } 
 \hline
-$W$ & $A$ & $P$ & $E$ & $W \land A$ & $W \land A \Rightarrow P$ & $(W \land A \Rightarrow P) \Rightarrow E$ \\
+$p$ & $q$ & $(p \Rightarrow q)$ & $(q \Rightarrow p)$ & $(p \Leftrightarrow q)$ & $(p \Rightarrow q) \land (q \Rightarrow p)$ & $(p \Leftrightarrow q) \Leftrightarrow (p \Rightarrow q) \land (q \Rightarrow p)$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
-\hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
 $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline\end{tabular}\\ \\
 
 \noindent
-$W \land A \Rightarrow P \vDash \lnot E$ \\
+$p, p \Rightarrow q \vDash q$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $(p \Rightarrow q)$ & $p \land (p \Rightarrow q)$ & $p \land (p \Rightarrow q) \Rightarrow q$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$\lnot q, p \Rightarrow q \vDash \lnot p$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c| } 
+\hline
+$q$ & $p$ & $\lnot q$ & $(p \Rightarrow q)$ & $\lnot q \land (p \Rightarrow q)$ & $\lnot p$ & $\lnot q \land (p \Rightarrow q) \Rightarrow \lnot p$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$q, p \Rightarrow q \vDash p$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$q$ & $p$ & $(p \Rightarrow q)$ & $q \land (p \Rightarrow q)$ & $q \land (p \Rightarrow q) \Rightarrow p$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{F}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \lor q, \lnot p \lor r \vDash q \lor r$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $r$ & $\lnot p$ & $(p \lor q)$ & $(\lnot p \lor r)$ & $(p \lor q) \land (\lnot p \lor r)$ & $q \lor r$ & $(p \lor q) \land (\lnot p \lor r) \Rightarrow q \lor r$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$p \land \lnot p \vDash q$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+$p$ & $q$ & $\lnot p$ & $p \land \lnot p$ & $p \land \lnot p \Rightarrow q$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$\lnot (p_{1} \lor p_{2}) \Leftrightarrow \lnot p_{1} \land \lnot p_{2}$ \\
 \noindent
 \begin{tabular}{ |c|c|c|c|c|c|c|c| } 
 \hline
-$W$ & $A$ & $P$ & $E$ & $W \land A$ & $W \land A \Rightarrow P$ & $\lnot E$ & $(W \land A \Rightarrow P) \Rightarrow \lnot E$ \\
+$p_{1}$ & $p_{2}$ & $(p_{1} \lor p_{2})$ & $\lnot p_{1}$ & $\lnot p_{2}$ & $\lnot (p_{1} \lor p_{2})$ & $\lnot p_{1} \land \lnot p_{2}$ & $\lnot (p_{1} \lor p_{2}) \Leftrightarrow \lnot p_{1} \land \lnot p_{2}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$(p_{1} \Rightarrow p_{2}) \land (p_{2} \Rightarrow p_{3}) \Rightarrow (p_{1} \Rightarrow p_{3})$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c|c| } 
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$p_{1}$ & $p_{2}$ & $p_{3}$ & $(p_{1} \Rightarrow p_{2})$ & $(p_{2} \Rightarrow p_{3})$ & $(p_{1} \Rightarrow p_{2}) \land (p_{2} \Rightarrow p_{3})$ & $p_{1} \Rightarrow p_{3}$ & $(p_{1} \Rightarrow p_{2}) \land (p_{2} \Rightarrow p_{3}) \Rightarrow p_{1} \Rightarrow p_{3}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$(p_{1} \lor p_{2}) \land (\lnot p_{1} \lor p_{3}) \Rightarrow p_{2} \lor p_{3}$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c| } 
 \hline
-$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$p_{1}$ & $p_{2}$ & $p_{3}$ & $\lnot p_{1}$ & $(p_{1} \lor p_{2})$ & $(\lnot p_{1} \lor p_{3})$ & $(p_{1} \lor p_{2}) \land (\lnot p_{1} \lor p_{3})$ & $p_{2} \lor p_{3}$ & $(p_{1} \lor p_{2}) \land (\lnot p_{1} \lor p_{3}) \Rightarrow p_{2} \lor p_{3}$ \\
 \hline
-$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline
-$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{F}}$ \\
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline\end{tabular}\\ \\
+
+\noindent
+$r_{1} \land \top \Leftrightarrow r_{1}$ \\
+\noindent
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+$r_{1}$ & $\top$ & $r_{1} \land \top$ & $r_{1} \land \top \Leftrightarrow r_{1}$ \\
+\hline
+$\mathbb{F}$ & $\mathbb{T}$ & $\mathbb{F}$ & $\textcolor{red}{\mathbb{T}}$ \\
+\hline
+$\mathbb{T}$ & $\mathbb{T}$ & $\mathbb{T}$ & $\textcolor{red}{\mathbb{T}}$ \\
 \hline\end{tabular}\\ \\
 

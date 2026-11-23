@@ -1,4 +1,104 @@
-#Generates all possible interpretations for the list of variables "vars" by using the method of binary counting.
+atomic_propositions = [f(x) for x in range(65,91) for f in (lambda y : chr(y), lambda y : chr(y + 32))]
+atomic_propositions.extend(['⊤','⊥'])
+
+connectives = ['¬','∧','∨','⇒','⇔']
+priority = {'⇔':1,'⇒':2,'∨':3,'∧':3,'¬':4}
+teXsymb = {'⊤':r"\top", '⊥':r"\bot", '¬':r"\lnot ", '∧':r"\land", '∨':r"\lor", '⇒':r"\Rightarrow", '⇔':r"\Leftrightarrow", '∼':r"\sim", '⊨':r"\vDash", '⊤':r"\top", '⊥':r"\bot"}
+nrs = [chr(48 + i) for i in range(10)]
+
+def lateXfy(text):
+    l = len(text)
+    i = 0
+    while i < l:
+        if text[i] in atomic_propositions:
+            i += 1
+            if i < l and text[i] in nrs:
+                j = i
+                while i < l and text[i] in nrs:
+                    i += 1
+                text = text[:j] + "_{" + text[j:i] + '}' + text[i:]
+                l = len(text)
+            i -= 1
+        i +=  1
+
+    for s in teXsymb.keys():
+        text = text.replace(s,teXsymb[s])
+
+    return text
+
+class Tree:
+    def __init__(self,name):
+        self.name = name
+        self.children = []
+        self.parent = 0
+        self.depth = 0
+
+    def append(self,childName):
+        Node = Tree(childName)
+        Node.parent = self
+        Node.depth = self.depth + 1
+        self.children.append(Node)
+
+    def visualize(self):
+        output = ''
+        par = self.parent
+        needs_paren = (
+            self.name in connectives and self.name != '¬' and par != 0 and (
+                priority[par.name] > priority[self.name]
+                or (priority[par.name] == priority[self.name]
+                    and self is not par.children[-1])
+                or (self.name in ['∧', '∨'] and par.name in ['∧', '∨']
+                    and self.name != par.name)
+            )
+        )
+        if needs_paren:
+            output += '(' + (' ' + self.name + ' ').join([child.visualize() for child in self.children]) + ')'
+        elif self.name in connectives and self.name != '¬':
+            output += (' ' + self.name + ' ').join([child.visualize() for child in self.children])
+        elif self.name == '¬':
+            output += '¬' + self.children[0].visualize()
+        else:
+            output += self.name
+        return output
+
+
+def parsePolish(Node):
+    global Q,i,depth
+
+    if Node.depth > depth:
+        depth = Node.depth
+
+    Node.name = Q[i]
+    if Q[i][0] in connectives:
+        if Q[i][0] == '¬':
+            Node.append("\"F\"")
+            i += 1
+            parsePolish(Node.children[0])
+
+        elif Q[i][0] in ['∧','∨']:
+            origin = Q[i][0]
+            Node.append("\"F\"")
+            Node.append("\"F\"")
+            openNodes = 2
+            while openNodes > 0:
+                i += 1
+                if Q[i] == origin:
+                    Node.append("\"F\"")
+                    Node.children.insert(0, Node.children.pop())
+                    openNodes += 1
+                else:
+                    parsePolish(Node.children[openNodes - 1])
+                    openNodes -= 1
+            
+        else:
+            Node.append("\"F\"")
+            Node.append("\"F\"")
+
+            i += 1
+            parsePolish(Node.children[1])
+            i += 1
+            parsePolish(Node.children[0])
+
 def generateInterpretations(vars):
     I = {}
     for var in vars:
@@ -13,142 +113,23 @@ def generateInterpretations(vars):
             else:
                 I[var] = False
 
-#Will be used to construct a tree object.
-class Tree:
-    #Constructor.
-    def __init__(self,name):
-        self.name = name
-        self.children = []
-        self.parent = 0
-        self.depth = 0
-        self.dom = 0
-        self.table_nr = 1.1
 
-    #Append a new subtree.
-    def append(self,childName):
-        Node = Tree(childName)
-        Node.parent = self
-        Node.depth = self.depth+1
-        self.children.append(Node)
+#Creates a table of all interpretations of this proposition under all interpretations. Warning it does change the current tree it is applied on.
+def table_first_row(depth):
+        global d,Pos,tab
+        t = tab[0]
 
-    #Returns a string that is a visualization of the tree in polish notation. (recommended only for complete trees)
-    def polish(self):
-        output = self.name
-        for child in self.children:
-            output += child.polish()
-        return output
-
-    #Returns a string that is a visualization of the tree, along with our position in the tree (if it exists).
-    def visualize(self):
-        output = "  "*self.depth + self.name + '\n'
-        for child in self.children:
-            output += child.visualize()
-        return output
-
-    #Returns a list containiing the leaves of the tree that had this node as root, from left to right, also sets up positions for the table.
-    def getLeaves(self):
-        global Leaves
-        if self.children == []:
-            if self.name not in Leaves:
-                self.table_nr = len(Leaves)
-                Leaves.append(self.name)
-        else:
-            for child in self.children:
-                child.getLeaves()
-        return Leaves
-
-    #Creates a table of all interpretations of this proposition under all interpretations. Warning it does change the current tree it is applied on.
-    def table(self,tab,depth):
-        global d
-
-        if self.depth == depth:
-            if self.name == '¬':
-
-                if isAtomic(self.children[0].name):
-                    self.name = '¬' + self.children[0].name
-                else:
-                    self.name = '¬' + '(' + self.children[0].name + ')'
-                if self.name not in tab:
-                    tab.append(self.name)
-                    d[self.name] = (tab.index(self.children[0].name),self.dom)
-
-
-            elif self.children != []:
-
-                left = 0
-                right = 0
-                #if the dominant operation of subproposition does not take priority over the current operation, we make sure it takes priority by putting a parenthesis around it.
-                if self.children[0].dom <= self.dom:
-                    left = 1
-                if self.children[1].dom <= self.dom:
-                    right = 1
-                self.name = '('*left + self.children[0].name + ')'*left + ' ' + self.name + ' ' + '('*right + self.children[1].name + ')'*right
-                if self.name not in tab:
-                    tab.append(self.name)
-                    d[self.name] = (tab.index(self.children[0].name),tab.index(self.children[1].name),self.dom)
+        if Pos.depth == depth:
+            aux = Pos.visualize()
+            if aux not in t:
+                t.append(aux)
+                d[aux] = [t.index(child.visualize()) for child in Pos.children]
+                d[aux].append(Pos.name)
 
         else:
-            for child in self.children:
-                child.table(tab,depth)
-
-#Class used solely to define an order on symbols.
-class Symbol:
-
-    priority = {'⇔':1,'⇒':2,'∨':3,'∧':3,'¬':4,' ':5}
-
-    def __init__(self,name):
-        self.name = name
-    
-    def __lt__(self,other):
-        return self.priority[self.name] < self.priority[other.name]
-
-    def __le__(self,other):
-        return self.priority[self.name] <= self.priority[other.name]
-
-    def __repr__(self):
-        return "".join(["'",self.name,"'"])
-
-#Checks if the symbol is an atomic proposition.
-def isAtomic(symbol):
-    if (('a' <= symbol <= 'z') or ('A' <= symbol <= 'Z') or symbol == '⊤' or symbol == '⊥') and len(symbol) == 1:
-        return True
-    return False
-
-#Checks if the symbol is a logical connective.
-def isConnective(symbol):
-    if symbol == '¬' or symbol == '∧' or symbol == '∨' or symbol == '⇒' or symbol == '⇔':
-        return True
-    return False
-
-#Will be used to attempt to create the abstract syntax after the shunting yard algorithm finishes.
-def fill(Node):
-    global Q,i,depth
-
-    if Node.depth > depth:
-        depth = Node.depth
-    
-    if isConnective(Q[i]):
-        if Q[i] == '¬':
-            Node.name = '¬'
-            Node.dom = Symbol('¬')
-            Node.append("\"F\"")
-            
-            i += 1
-            fill(Node.children[0])
-        else:
-            Node.name = Q[i]
-            Node.dom = Symbol(Q[i])
-            Node.append("\"F\"")
-            Node.append("\"F\"")
-
-            i += 1
-            fill(Node.children[1])
-            i += 1
-            fill(Node.children[0])
-    else:
-        Node.name = Q[i]
-        Node.dom = Symbol(' ')
-    
+            for child in Pos.children:
+                Pos = child
+                table_first_row(depth)
 
 with open("table_In.txt",'r', encoding="UTF-8") as f:
     exps = f.readlines()
@@ -162,7 +143,7 @@ f = open("table_Out.txt",'w', encoding="UTF-8")
 
 for exp in exps:
 
-    exp = exp[:-1]
+    exp = exp.strip(" \n")
     Q = []
     S = []
     d = {}
@@ -177,54 +158,55 @@ for exp in exps:
         j = exp.index('⊨')
         exp = '(' + exp[0:j-1] + ') ⇒ (' + exp[j+2:] + ')'
 
-    for symb in exp:
+    Leaves = []
 
-        #Spaces are not relevant.
+    for i in range(len(exp)):
+        symb = exp[i]
+
         if symb != ' ':
 
-            #If the symbol is a propositional variable it gets added to the queue.
-            if isAtomic(symb) == True:
+            if symb in atomic_propositions:
+                i += 1
+                while i < len(exp) and exp[i] in nrs :
+                    symb += exp[i]
+                    i += 1
+                if symb not in Leaves:
+                    Leaves.append(symb)
                 Q.append(symb)
 
-            #For logical connectives we may need to check precedence first.  
-            elif isConnective(symb):
-                A = Symbol(symb)
+            elif symb in connectives:
                 if len(S) == 0 or S[-1] == '(':
-                    S.append(A)
+                    S.append(symb)
                 else:
-                    while len(S) != 0 and S[-1] != '(' and A < S[-1]:
-                        Q.append(S[-1].name)
+                    while len(S) != 0 and S[-1] != '(' and priority[symb] < priority[S[-1]]:
+                        Q.append(S[-1])
                         S.pop()
-                    S.append(A)
+                    S.append(symb)
 
-            #An open paranthesis doesn't do anything on its own.
             elif symb == '(':
                 S.append(symb)
 
-            #A closed paranthesis must have an accompanying open paranthesis to determine the priority of connectives.
             elif symb == ')':
                 while len(S) != 0 and S[-1] != '(':
-                    Q.append(S[-1].name)
+                    Q.append(S[-1])
                     S.pop()
                 S.pop()
 
-    #We clean the stack after all symbols have ran out.
     while len(S) != 0 and S[-1] != '(':
-        Q.append(S[-1].name)
+        Q.append(S[-1])
         S.pop()
-
     Q.reverse()
+
     i = 0
     depth = 0
     T = Tree("\"F\"")
-    fill(T)
+    parsePolish(T)
 
     tab = [[]]
-    Leaves = []
-    T.getLeaves()
     tab[0].extend(Leaves)
     for i in range(depth,-1,-1):
-        T.table(tab[0],i)
+        Pos = T
+        table_first_row(i)
 
     excluded = []
     if '⊤' in Leaves:
@@ -247,41 +229,44 @@ for exp in exps:
 
         for j in range(len(Leaves) + len(excluded),len(tab[0])):
 
-            if d[tab[0][j]][-1].name == '¬':
+            if d[tab[0][j]][-1] == '¬':
                 ind = d[tab[0][j]][0]
                 tab[i].append(not tab[i][ind])
 
-            elif d[tab[0][j]][-1].name == '∧':
-                ind = d[tab[0][j]][0]
-                jnd = d[tab[0][j]][1]
-                tab[i].append(tab[i][ind] and tab[i][jnd])
+            elif d[tab[0][j]][-1] == '∧':
+                aux = True
+                for ind in d[tab[0][j]][:-1]:
+                    if tab[i][ind] == False:
+                        aux = False
+                        break
+                tab[i].append(aux)
 
-            elif d[tab[0][j]][-1].name == '∨':
-                ind = d[tab[0][j]][0]
-                jnd = d[tab[0][j]][1]
-                tab[i].append(tab[i][ind] or tab[i][jnd])
+            elif d[tab[0][j]][-1] == '∨':
+                aux = False
+                for ind in d[tab[0][j]][:-1]:
+                    if tab[i][ind] == True:
+                        aux = True
+                        break
+                tab[i].append(aux)
 
-            elif d[tab[0][j]][-1].name == '⇒':
+            elif d[tab[0][j]][-1] == '⇒':
                 ind = d[tab[0][j]][0]
                 jnd = d[tab[0][j]][1]
-                tab[i].append((not tab[i][ind]) or tab[i][jnd])
+                if tab[i][ind] == True and tab[i][jnd] == False:
+                    tab[i].append(False)
+                else:
+                    tab[i].append(True)
 
-            elif d[tab[0][j]][-1].name == '⇔':
+            elif d[tab[0][j]][-1] == '⇔':
                 ind = d[tab[0][j]][0]
                 jnd = d[tab[0][j]][1]
-                tab[i].append( ( (not tab[i][ind]) or tab[i][jnd] ) and ( (not tab[i][jnd]) or tab[i][ind] ))
+                if tab[i][ind] ==  tab[i][jnd]:
+                    tab[i].append(True)
+                else:
+                    tab[i].append(False)
 
     #Changing into latex comptatible syntax
-    exp = sav
-    exp = exp.replace('¬',r"\lnot ")
-    exp = exp.replace('∧',r"\land")
-    exp = exp.replace('∨',r"\lor")
-    exp = exp.replace('⇒',r"\Rightarrow")
-    exp = exp.replace('⇔',r"\Leftrightarrow")
-    exp = exp.replace('∼',r"\sim")
-    exp = exp.replace('⊨',r"\vDash")
-    exp = exp.replace('⊤', r"\top")
-    exp = exp.replace('⊥', r"\bot")
+    exp = lateXfy(sav)
 
     f.write(r"\noindent" + '\n')
     f.write('$' + exp + '$' + r" \\" + '\n')
@@ -316,7 +301,7 @@ for exp in exps:
                 tab[i][j] = tab[i][j].replace('⇒',r"\Rightarrow")
                 tab[i][j] = '$' + tab[i][j].replace('⇔',r"\Leftrightarrow") + '$'
         f.write(r"\hline" + '\n')
-        f.write(" & ".join(tab[i]) + r" \\" +'\n')
+        f.write(" & ".join([lateXfy(a) for a in tab[i]]) + r" \\" +'\n')
 
     f.write(r"\hline")
     f.write(r"\end{tabular}\\ \\" + "\n\n")

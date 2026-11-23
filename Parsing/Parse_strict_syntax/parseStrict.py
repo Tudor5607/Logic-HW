@@ -1,5 +1,5 @@
 atomic_propositions = [f(x) for x in range(65,91) for f in (lambda y : chr(y), lambda y : chr(y + 32))]
-atomic_propositions.extend(['⊤','⊥'])
+s_ato_prop =['⊤','⊥']
 
 nrs = [chr(48 + i) for i in range(10)]
 connectives = ['¬','∧','∨','⇒','⇔']
@@ -52,7 +52,7 @@ def movePosUp():
         Pos.ispos = 1
 
 def movePosDown():
-    global Pos,state
+    global Pos
     Pos.ispos = 0
     for child in Pos.children:
         if child.name == "\"F\"":
@@ -71,7 +71,7 @@ def step(symbol):
         else:
             state = "Not well-formed: Didn't expect a '(' here."
 
-    elif symbol[0] in atomic_propositions:
+    elif symbol[0] in atomic_propositions or symbol in s_ato_prop:
         if Pos.name == "\"F\"":
             Pos.name = symbol
             movePosUp()

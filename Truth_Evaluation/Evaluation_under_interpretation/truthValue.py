@@ -2,6 +2,8 @@ atomic_propositions = [f(x) for x in range(65,91) for f in (lambda y : chr(y), l
 atomic_propositions.extend(['⊤','⊥'])
 
 connectives = ['¬','∧','∨','⇒','⇔']
+priority = {'⇔':1,'⇒':2,'∨':3,'∧':3,'¬':4}
+teXsymb = {'⊤':r"\top", '⊥':r"\bot", '¬':r"\lnot ", '∧':r"\land", '∨':r"\lor", '⇒':r"\Rightarrow", '⇔':r"\Leftrightarrow", '□':r"\square"}
 nrs = [chr(48 + i) for i in range(10)]
 
 def lateXfy(text):
@@ -29,58 +31,39 @@ class Tree:
         self.name = name
         self.children = []
         self.parent = 0
-        self.ispos = 0
         self.depth = 0
 
     def append(self,childName):
         Node = Tree(childName)
         Node.parent = self
-        Node.depth = self.depth+1
+        Node.depth = self.depth + 1
         self.children.append(Node)
 
     def visualize(self):
-        output = "  "*self.depth + self.name + "<--"*self.ispos + '\n'
-        for child in self.children:
-            output += child.visualize()
+        output = ''
+        par = self.parent
+        needs_paren = (
+            self.name in connectives and self.name != '¬' and par != 0 and (
+                priority[par.name] > priority[self.name]
+                or (priority[par.name] == priority[self.name]
+                    and self is not par.children[-1])
+                or (self.name in ['∧', '∨'] and par.name in ['∧', '∨']
+                    and self.name != par.name)
+            )
+        )
+        if needs_paren:
+            output += '(' + (' ' + self.name + ' ').join([child.visualize() for child in self.children]) + ')'
+        elif self.name in connectives and self.name != '¬':
+            output += (' ' + self.name + ' ').join([child.visualize() for child in self.children])
+        elif self.name == '¬':
+            output += '¬' + self.children[0].visualize()
+        else:
+            output += self.name
         return output
-
-    def delete_descendents(self):
-        self.children = []
-
-def evaluate(Node,endLevel,v):
-    if Node.depth == endLevel:
-        if isAtomic(Node.name):
-            Node.name = str(v[Node.name])
-
-        elif Node.name == '¬':
-            Node.name = str(not str_to_bool(Node.children[0].name))
-            Node.delete_descendents()
-
-        elif Node.name == '∧':
-            Node.name = str(str_to_bool(Node.children[0].name) and str_to_bool(Node.children[1].name))
-            Node.delete_descendents()
-
-        elif Node.name == '∨':
-            Node.name = str(str_to_bool(Node.children[0].name) or str_to_bool(Node.children[1].name))
-            Node.delete_descendents()
-
-        elif Node.name == '⇒':
-            Node.name = str((not str_to_bool(Node.children[0].name)) or str_to_bool(Node.children[1].name))
-            Node.delete_descendents()
-
-        elif Node.name == '⇔':
-            op1 = (not str_to_bool(Node.children[0].name)) or str_to_bool(Node.children[1].name)
-            op2 = (not str_to_bool(Node.children[1].name)) or str_to_bool(Node.children[0].name)
-            Node.name = str(op1 and op2)
-            Node.delete_descendents()
-
-    else:
-        for child in Node.children:
-            evaluate(child,endLevel,v)
-
 
 def parsePolish(Node):
     global p,i,depth
+
     if Node.depth > depth:
         depth = Node.depth
         
@@ -113,6 +96,56 @@ def parsePolish(Node):
             Node.name += p[i]
             i += 1
         i -= 1
+
+def evaluate(Node,endLevel,v):
+    if Node.depth == endLevel:
+        if Node.name in v:
+            Node.name = v[Node.name]
+
+        elif Node.name == '¬':
+            if Node.children[0].name == True:
+                Node.name = False
+            else:
+                Node.name = True
+
+        elif Node.name == '∧':
+            Node.name = True
+            for child in Node.children:
+                if child.name == False:
+                    Node.name = False
+
+        elif Node.name == '∨':
+            Node.name = False
+            for child in Node.children:
+                if child.name == True:
+                    Node.name = True
+            
+        elif Node.name == '⇒':
+            if Node.children[0].name == True and Node.children[1].name == False:
+                Node.name = False
+            else:
+                Node.name = True
+
+        elif Node.name == '⇔':
+            if Node.children[0].name == Node.children[1].name:
+                Node.name = True
+            else:
+                Node.name = False
+
+        Node.children = []
+
+        if Node.name == True:
+            return r"\mathbb{T}"
+        else:
+            return r"\mathbb{F}"
+    else:
+        if Node.name in connectives:
+            output = r"\mathcal{B}" + "_{}(".format(teXsymb[Node.name])
+            output += ','.join(evaluate(c,endLevel,v) for c in Node.children) + ')'
+            return output
+        else:
+            output = r"v_{\mathcal{I}}(" + lateXfy(Node.name) + ')'
+            return output
     
 
 with open("truthValue_In.txt",'r', encoding="UTF-8") as f:
@@ -130,15 +163,18 @@ for pair in I:
         d[pair[0]] = True
     else:
         d[pair[0]] = False
+d['⊤'] = True 
+d['⊥'] = False
 
 for p in Prop:
     T = Tree("\"F\"")
     i = 0
     depth = 0
     parsePolish(T)
-    print(T.visualize())
-    #for i in range(depth,-1,-1):
-    #    evaluate(T,i,d)
-    #    f.write(T.visualize() + '\n')
+    f.write(r"v_{\mathcal{I}}(" + lateXfy(T.visualize()) + r")=\\")
+    for i in range(depth + 1,-1,-1):
+        f.write(evaluate(T,i,d) + r'=\\')
+    f.seek(f.tell() - 3)
+    f.write(r"\\ \\" + '\n')
         
 f.close()

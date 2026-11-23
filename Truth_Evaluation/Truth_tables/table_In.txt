@@ -1,2 +1,28 @@
-W ∧ A ⇒ P ⊨ E
-W ∧ A ⇒ P ⊨ ¬E
+p
+¬p ∨ p
+p ∧ ¬p
+p ⇒ q
+(p ∧ q) ∨ r
+p ⇒ q ⇒ r
+(p ⇒ q) ⇒ r
+¬¬p ⇔ p
+¬(p ∧ q) ⇔ ¬p ∨ ¬q
+(p ⇒ q) ∧ (q ⇒ r) ⇒ (p ⇒ r)
+(p ∨ q) ∧ (¬p ∨ r) ⇒ q ∨ r
+p ∨ ⊥ ⇔ p
+⊤ ∧ ¬⊥
+(p ⇒ q) ∧ (r ⇒ s) ∧ (p ∨ r) ⇒ q ∨ s
+p1 ∧ p2 ⇒ p10
+p ⇒ q ∼ ¬p ∨ q
+p ⇒ q ∼ q ⇒ p
+p ∧ (q ∨ r) ∼ (p ∧ q) ∨ (p ∧ r)
+p ⇔ q ∼ (p ⇒ q) ∧ (q ⇒ p)
+p, p ⇒ q ⊨ q
+¬q, p ⇒ q ⊨ ¬p
+q, p ⇒ q ⊨ p
+p ∨ q, ¬p ∨ r ⊨ q ∨ r
+p ∧ ¬p ⊨ q
+¬(p1 ∨ p2) ⇔ ¬p1 ∧ ¬p2
+(p1 ⇒ p2) ∧ (p2 ⇒ p3) ⇒ (p1 ⇒ p3)
+(p1 ∨ p2) ∧ (¬p1 ∨ p3) ⇒ p2 ∨ p3
+r1 ∧ ⊤ ⇔ r1
