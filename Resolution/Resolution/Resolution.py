@@ -25,39 +25,10 @@ for k in K:
 
 f = open("Resolution_Out.txt", 'w' , encoding="UTF-8")
 
+i = 0
 l = len(vars)
 
 end = 0
-for i in range(l):
-    for s in vars[i][0]:
-        for j in range(l):
-            if i != j and (1-s[0],s[1]) in vars[j][0]:
-                u = vars[i][0].union(vars[j][0])
-                u = u.difference({(0, s[1]), (1, s[1])})
-
-                good = 1
-                for let in letters:
-                    if (0,let) in u and (1,let) in u:
-                        good = 0
-                        break
-
-                if u == set():
-                    end = 1
-
-                if u not in [a[0] for a in vars] and good == 1:
-                    vars.append([u,i+1,j+1])
-
-            if end == 1:
-                break
-
-        if end == 1:
-            break
-
-    if end == 1:
-        break
-
-i = l
-l = len(vars)
 while i < l:
     for s in vars[i][0]:
         for j in range(l):

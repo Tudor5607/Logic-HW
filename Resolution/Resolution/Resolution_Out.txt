@@ -1,42 +1,32 @@
-(1) $\{\lnot W, P, \lnot A \}$ \\
-(2) $\{I, A \}$ \\
-(3) $\{M, W \}$ \\
-(4) $\{\lnot P \}$ \\
-(5) $\{\lnot I, \lnot E \}$ \\
-(6) $\{\lnot M, \lnot E \}$ \\
-(7) $\{E \}$ \\
-(8) $\{M, P, \lnot A \}$ from (1) and (3)\\
-(9) $\{\lnot W, \lnot A \}$ from (1) and (4)\\
-(10) $\{\lnot W, I, P \}$ from (1) and (2)\\
-(11) $\{\lnot E, A \}$ from (2) and (5)\\
-(12) $\{\lnot E, W \}$ from (3) and (6)\\
-(13) $\{\lnot I \}$ from (5) and (7)\\
-(14) $\{\lnot M \}$ from (6) and (7)\\
-(15) $\{P, \lnot A, \lnot E \}$ from (8) and (6)\\
-(16) $\{P, \lnot A \}$ from (8) and (14)\\
-(17) $\{M, \lnot A \}$ from (8) and (4)\\
-(18) $\{I, P, M \}$ from (8) and (2)\\
-(19) $\{M, P, \lnot E \}$ from (8) and (11)\\
-(20) $\{\lnot E, \lnot A \}$ from (9) and (12)\\
-(21) $\{\lnot W, I \}$ from (9) and (2)\\
-(22) $\{\lnot W, \lnot E \}$ from (9) and (11)\\
-(23) $\{I, P, \lnot E \}$ from (10) and (12)\\
-(24) $\{\lnot W, P, \lnot E \}$ from (10) and (5)\\
-(25) $\{\lnot W, P \}$ from (10) and (13)\\
-(26) $\{A \}$ from (11) and (7)\\
-(27) $\{P, \lnot E \}$ from (11) and (15)\\
-(28) $\{M, \lnot E \}$ from (11) and (17)\\
-(29) $\{\lnot E \}$ from (11) and (20)\\
-(30) $\{W \}$ from (12) and (7)\\
-(31) $\{I, \lnot E \}$ from (12) and (21)\\
-(32) $\{M, P \}$ from (13) and (18)\\
-(33) $\{\lnot W \}$ from (13) and (21)\\
-(34) $\{\lnot A \}$ from (14) and (17)\\
-(35) $\{I, P \}$ from (14) and (18)\\
-(36) $\{P \}$ from (14) and (32)\\
-(37) $\{M, I \}$ from (17) and (2)\\
-(38) $\{M \}$ from (17) and (26)\\
-(39) $\{I \}$ from (21) and (30)\\
-(40) $\{ \}$ from (26) and (34)\\
+(1) $\{P, Q, \lnot R \}$ \\
+(2) $\{\lnot P, R \}$ \\
+(3) $\{P, S, \lnot Q \}$ \\
+(4) $\{\lnot R, \lnot P, \lnot Q \}$ \\
+(5) $\{P, \lnot S \}$ \\
+(6) $\{P, S, \lnot R \}$ from (1) and (3)\\
+(7) $\{S, R, \lnot Q \}$ from (2) and (3)\\
+(8) $\{\lnot S, R \}$ from (2) and (5)\\
+(9) $\{\lnot P, \lnot Q \}$ from (2) and (4)\\
+(10) $\{S, \lnot R, \lnot Q \}$ from (3) and (4)\\
+(11) $\{S, \lnot Q \}$ from (3) and (9)\\
+(12) $\{P, \lnot Q \}$ from (3) and (5)\\
+(13) $\{P, \lnot Q, R \}$ from (3) and (8)\\
+(14) $\{S, \lnot P, \lnot Q \}$ from (4) and (7)\\
+(15) $\{\lnot S, \lnot P, \lnot Q \}$ from (4) and (8)\\
+(16) $\{\lnot S, \lnot R, \lnot Q \}$ from (4) and (5)\\
+(17) $\{\lnot R, \lnot Q \}$ from (4) and (12)\\
+(18) $\{\lnot S, \lnot Q \}$ from (5) and (9)\\
+(19) $\{P, \lnot R \}$ from (5) and (6)\\
+(20) $\{P, \lnot R, \lnot Q \}$ from (5) and (10)\\
+(21) $\{R, \lnot Q \}$ from (7) and (8)\\
+(22) $\{R, \lnot P, \lnot Q \}$ from (7) and (15)\\
+(23) $\{P, \lnot S, Q \}$ from (8) and (1)\\
+(24) $\{P, \lnot S, \lnot Q \}$ from (8) and (20)\\
+(25) $\{\lnot Q \}$ from (9) and (12)\\
+(26) $\{\lnot Q, \lnot S, R \}$ from (13) and (15)\\
+(27) $\{P, \lnot S, R \}$ from (13) and (23)\\
+(28) $\{P, \lnot S, \lnot R \}$ from (16) and (1)\\
+(29) $\{Q, \lnot S, R \}$ from (23) and (2)\\
+(30) $\{\lnot S, \lnot P, R \}$ from (29) and (9)\\
 
-Unsatisfiable
+Satisfiable

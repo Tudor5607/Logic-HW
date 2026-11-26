@@ -1,0 +1,14 @@
+How to install:
+Take the url of the folder containing this text file, and paste it into the website download-directory.github.io
+
+How to use:
+-Input:
+The input file will contain on a single line, a set of clauses. Each set must be wrapped in {} and all "}"-s except for the last one must have a comma after it. Every clause must not contain duplicate or complementary literals.
+Note: The empty clause or an empty set as input do not work.
+
+-Running the program:
+The program can be run from inside an IDE like Visual Studio Code or directly from the terminal (note that the .py file must be run from inside the folder it is contained in, as the file input/output will not work otherwise).
+
+-Output:
+The output file will contain the solution to the problem of unsatisfiability for the propositional formula corresponding to the set of clauses inputed, along with all the steps of the DP algorithm that was used used to solve this problem.
+Note: The output will be a text file whose contantes are intended to be pasted into a .tex document.
